@@ -1,0 +1,405 @@
+<!doctype html>
+<!-- ========================================================================= -->
+<!-- 🐝 NECTAR & HIVE — STANDALONE MAINTENANCE MODE FILE                       -->
+<!-- ========================================================================= -->
+<!-- HOW TO TURN MAINTENANCE MODE ON & OFF:                                    -->
+<!--                                                                           -->
+<!-- TO TURN MAINTENANCE MODE ON:                                              -->
+<!-- 1. Rename your live 'index.html' to 'index.store.html'                    -->
+<!-- 2. Copy/rename this file 'index.maintenance.html' to 'index.html'         -->
+<!-- Now every visitor to your website will see this maintenance screen!       -->
+<!--                                                                           -->
+<!-- TO TURN MAINTENANCE MODE OFF (REOPEN STORE):                              -->
+<!-- 1. Rename 'index.html' back to 'index.maintenance.html'                   -->
+<!-- 2. Rename 'index.store.html' back to 'index.html'                         -->
+<!-- Your live store is instantly reopened to the public!                      -->
+<!-- ========================================================================= -->
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Under Maintenance · Tending to the Hives | Nectar &amp; Hive Durban</title>
+    <meta name="description" content="Nectar &amp; Hive is currently undergoing brief maintenance while we update our seasonal artisanal honey catalog. We will be back online shortly. For direct orders, WhatsApp +27 82 773 6543." />
+    <meta property="og:title" content="Under Maintenance | Nectar &amp; Hive Durban" />
+    <meta property="og:description" content="Nectar &amp; Hive is currently undergoing brief maintenance while we update our seasonal artisanal honey catalog. WhatsApp +27 82 773 6543 for direct orders." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Browser Tab Icon / Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Typography: Galano Grotesque / Bahnschrift & geometric grotesque alternates -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons via CDN -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              linen: {
+                DEFAULT: '#FAF3E1',
+                50: '#FDFCF7',
+                100: '#FAF3E1',
+                200: '#F5E7C6',
+                dark: '#E8D7B0',
+              },
+              cotton: {
+                DEFAULT: '#F5E7C6',
+                50: '#FAF3E1',
+                100: '#F5E7C6',
+                200: '#EBDAAE',
+                dark: '#DECA97',
+              },
+              ochre: {
+                DEFAULT: '#D1A22A',
+                light: '#E0B548',
+                dark: '#B08218',
+                50: '#FAF3E1',
+                100: '#F5E7C6',
+              },
+              gold: {
+                DEFAULT: '#D1A22A',
+                light: '#E0B548',
+                dark: '#B08218',
+                50: '#FAF3E1',
+                100: '#FAF3E1',
+                200: '#F5E7C6',
+              },
+              amber: {
+                DEFAULT: '#000000',
+                light: '#262626',
+                dark: '#000000',
+                deep: '#000000',
+              }
+            },
+            fontFamily: {
+              sans: ['"Galano Grotesque"', 'Bahnschrift', '"Outfit"', '"Barlow"', 'system-ui', '-apple-system', 'sans-serif'],
+              display: ['"Galano Grotesque"', 'Bahnschrift', '"Outfit"', 'system-ui', 'sans-serif'],
+              bahnschrift: ['Bahnschrift', '"Barlow"', '"DIN Alternate"', '"Outfit"', 'sans-serif'],
+            },
+            boxShadow: {
+              'luxury': '0 10px 30px -10px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04)',
+              'gold-glow': '0 0 35px rgba(209, 162, 42, 0.45)',
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      @font-face {
+        font-family: 'Galano Grotesque';
+        src: local('Galano Grotesque Bold'), local('Galano Grotesque-Bold'), local('Galano Grotesque'), local('GalanoGrotesque');
+        font-weight: 600 800;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Bahnschrift';
+        src: local('Bahnschrift'), local('Bahnschrift Regular'), local('Bahnschrift-Regular');
+        font-display: swap;
+      }
+
+      body {
+        font-family: 'Galano Grotesque', 'Bahnschrift', 'Outfit', 'Barlow', -apple-system, sans-serif;
+      }
+      h1, h2, h3, h4, .brand-title {
+        font-family: 'Galano Grotesque', 'Bahnschrift', 'Outfit', sans-serif;
+        letter-spacing: -0.02em;
+      }
+
+      /* Luminous Gradient Canvas */
+      .hero-gradient-canvas {
+        background-color: #000000;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .light-orb {
+        position: absolute;
+        border-radius: 9999px;
+        pointer-events: none;
+        mix-blend-mode: screen;
+        will-change: transform, opacity;
+      }
+
+      .orb-ochre-top {
+        width: 480px;
+        height: 480px;
+        background: radial-gradient(circle, rgba(209, 162, 42, 0.95) 0%, rgba(209, 162, 42, 0.7) 40%, rgba(209, 162, 42, 0.15) 65%, transparent 80%);
+        filter: blur(85px);
+        top: -80px;
+        right: 12%;
+        opacity: 0.9;
+        animation: floatOrbTop 16s ease-in-out infinite alternate;
+      }
+
+      .orb-linen-mid {
+        width: 420px;
+        height: 420px;
+        background: radial-gradient(circle, rgba(250, 243, 225, 0.9) 0%, rgba(245, 231, 198, 0.65) 45%, rgba(209, 162, 42, 0.2) 70%, transparent 80%);
+        filter: blur(95px);
+        top: 20%;
+        right: 2%;
+        opacity: 0.85;
+        animation: floatOrbMid 19s ease-in-out infinite alternate;
+      }
+
+      .orb-ochre-bot {
+        width: 520px;
+        height: 520px;
+        background: radial-gradient(circle, rgba(209, 162, 42, 0.9) 0%, rgba(224, 181, 72, 0.65) 45%, rgba(209, 162, 42, 0.15) 70%, transparent 80%);
+        filter: blur(100px);
+        bottom: -100px;
+        right: 18%;
+        opacity: 0.85;
+        animation: floatOrbBot 22s ease-in-out infinite alternate;
+      }
+
+      .orb-ambient-left {
+        width: 380px;
+        height: 380px;
+        background: radial-gradient(circle, rgba(245, 231, 198, 0.35) 0%, rgba(209, 162, 42, 0.2) 50%, transparent 75%);
+        filter: blur(90px);
+        top: 30%;
+        left: -60px;
+        opacity: 0.5;
+        animation: floatOrbLeft 20s ease-in-out infinite alternate;
+      }
+
+      @media (min-width: 1024px) {
+        .orb-ochre-top { width: 580px; height: 580px; filter: blur(105px); }
+        .orb-linen-mid { width: 500px; height: 500px; filter: blur(110px); }
+        .orb-ochre-bot { width: 620px; height: 620px; filter: blur(120px); }
+      }
+
+      @keyframes floatOrbTop {
+        0% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(35px, 25px) scale(1.08); }
+        100% { transform: translate(-25px, 45px) scale(0.96); }
+      }
+
+      @keyframes floatOrbMid {
+        0% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(-45px, -30px) scale(1.12); }
+        100% { transform: translate(30px, 25px) scale(0.94); }
+      }
+
+      @keyframes floatOrbBot {
+        0% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(30px, -35px) scale(1.06); }
+        100% { transform: translate(-35px, -20px) scale(1.12); }
+      }
+
+      @keyframes floatOrbLeft {
+        0% { transform: translate(0, 0) scale(1); }
+        100% { transform: translate(30px, 40px) scale(1.1); }
+      }
+
+      /* View Animations */
+      .view-fade {
+        animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+  </head>
+  <body class="bg-[#000000] text-[#FAF3E1] selection:bg-[#D1A22A]/25 selection:text-[#FAF3E1] font-sans min-h-screen flex flex-col antialiased">
+
+    <!-- Golden Ochre Brand Accent Line -->
+    <div class="h-1 bg-[#D1A22A] w-full shrink-0"></div>
+
+    <!-- Header -->
+    <header class="border-b border-[#FAF3E1]/10 bg-black/60 backdrop-blur-md sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+        <div class="flex items-center gap-3.5 sm:gap-4">
+          <div class="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden flex items-center justify-center shrink-0 border border-[#D1A22A]/30 bg-white">
+            <img 
+              src="/images/logo.svg" 
+              alt="Nectar &amp; Hive Logo" 
+              class="w-full h-full object-cover rounded-full"
+              onerror="this.onerror=null; this.src='/images/Untitled-3.png';"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display text-xl sm:text-2xl font-bold tracking-tight text-[#FAF3E1]">
+              NECTAR &amp; HIVE
+            </span>
+            <span class="text-[11px] text-[#D1A22A] font-bahnschrift tracking-widest uppercase">
+              Sherwood · Durban
+            </span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <a 
+            href="https://wa.me/27827736543?text=Hello%20Nectar%20%26%20Hive%2C%20I%20would%20like%20to%20order%20raw%20honey" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full text-xs font-semibold tracking-wide transition-all flex items-center gap-1.5 font-bahnschrift shadow-sm">
+            <i class="ph ph-whatsapp-logo text-base"></i>
+            <span class="hidden sm:inline">Order on WhatsApp</span>
+            <span class="sm:hidden">WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center py-16 sm:py-24 relative hero-gradient-canvas">
+      <!-- Luminous Gradient Light Orbs -->
+      <div class="light-orb orb-ochre-top"></div>
+      <div class="light-orb orb-linen-mid"></div>
+      <div class="light-orb orb-ochre-bot"></div>
+      <div class="light-orb orb-ambient-left"></div>
+
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center flex flex-col items-center z-10 view-fade">
+        
+        <!-- Pulsing Bee Emblem Badge -->
+        <div class="relative mb-6">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#D1A22A]/15 border border-[#D1A22A]/35 flex items-center justify-center text-[#D1A22A] mx-auto shadow-[0_0_40px_rgba(209,162,42,0.35)] backdrop-blur-sm">
+            <i class="ph-fill ph-drop text-4xl sm:text-5xl text-[#D1A22A] animate-pulse"></i>
+          </div>
+          <div class="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-black border border-[#D1A22A] flex items-center justify-center text-xs text-[#FAF3E1] shadow-md" title="Site Under Maintenance">
+            <i class="ph ph-wrench text-sm text-[#D1A22A]"></i>
+          </div>
+        </div>
+
+        <!-- Kicker -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-black/60 border border-[#D1A22A]/40 text-[#D1A22A] text-xs font-semibold tracking-[0.24em] uppercase font-bahnschrift mb-6 select-none backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-[#D1A22A] animate-ping"></span>
+          <span>Tending to the Hives · Maintenance Mode</span>
+        </div>
+
+        <!-- Heading -->
+        <h1 class="font-display text-4xl sm:text-6xl font-bold text-[#FAF3E1] tracking-tight leading-[1.12] mb-5 text-balance drop-shadow-sm">
+          Currently in Maintenance.<br />
+          <span class="font-light font-normal text-[#F5E7C6]">Perfecting Our Next Harvest.</span>
+        </h1>
+
+        <!-- Narrative -->
+        <p class="text-base sm:text-lg text-[#FAF3E1]/85 max-w-2xl mx-auto leading-relaxed font-light mb-8 font-bahnschrift text-balance">
+          We are briefly updating our online boutique and preparing seasonal batches of 100% raw, cold-extracted South African honey in Sherwood, Durban. We will be back online shortly!
+        </p>
+
+        <!-- Current Status Box -->
+        <div class="w-full max-w-lg mb-8 p-4 rounded-xl bg-black/50 border border-[#D1A22A]/30 backdrop-blur-md text-xs text-[#FAF3E1]/90 flex items-center gap-3 text-left font-bahnschrift shadow-lg">
+          <div class="w-8 h-8 rounded-lg bg-[#D1A22A]/20 flex items-center justify-center shrink-0 text-[#D1A22A]">
+            <i class="ph ph-clock-countdown text-lg"></i>
+          </div>
+          <div class="flex-1">
+            <div class="font-semibold text-[#D1A22A] uppercase tracking-wider text-[10px]">Current Status:</div>
+            <div id="maintenance-status-notice">Scheduled site maintenance &amp; catalog update. Store reopening soon.</div>
+          </div>
+        </div>
+
+        <!-- Urgent Honey Order Card -->
+        <div class="w-full max-w-lg p-6 sm:p-7 rounded-2xl bg-[#000000]/70 border border-[#D1A22A]/40 backdrop-blur-lg shadow-[0_10px_35px_rgba(0,0,0,0.5)] mb-8 text-left font-bahnschrift space-y-4">
+          <div class="flex items-center justify-between border-b border-[#FAF3E1]/10 pb-3">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <h3 class="text-sm font-bold text-[#FAF3E1] uppercase tracking-wider">Need Honey Today?</h3>
+            </div>
+            <span class="text-[11px] text-[#D1A22A]">Sherwood, Durban</span>
+          </div>
+          <p class="text-xs text-[#FAF3E1]/80 leading-relaxed font-light">
+            Our bees never sleep! You can still place raw honey orders, arrange free local collection in Sherwood, or enquire about nationwide courier dispatch directly on WhatsApp.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
+            <a 
+              href="https://wa.me/27827736543?text=Hello%20Nectar%20%26%20Hive%2C%20I%20noticed%20the%20website%20is%20in%20maintenance.%20I%20would%20like%20to%20order%20raw%20honey" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="flex-1 py-3 px-5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs tracking-wide rounded-full shadow-md transition-all flex items-center justify-center gap-2 text-center">
+              <i class="ph ph-whatsapp-logo text-base"></i>
+              <span>Order on WhatsApp (+27 82 773 6543)</span>
+            </a>
+            <a 
+              href="tel:+27827736543" 
+              class="py-3 px-4 bg-white/10 hover:bg-white/15 text-[#FAF3E1] font-semibold text-xs rounded-full border border-white/15 transition-colors flex items-center justify-center gap-1.5 text-center">
+              <i class="ph ph-phone text-sm text-[#D1A22A]"></i>
+              <span>Call Us</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Reopen Notification Form -->
+        <div class="w-full max-w-md mb-8">
+          <form onsubmit="handleNotifySubmit(event)" class="flex flex-col sm:flex-row items-center gap-2">
+            <div class="relative w-full">
+              <i class="ph ph-envelope-simple absolute left-3.5 top-1/2 -translate-y-1/2 text-[#FAF3E1]/40 text-sm"></i>
+              <input 
+                type="email" 
+                id="notify-email" 
+                required 
+                placeholder="Enter email to get notified when live" 
+                class="w-full pl-10 pr-4 py-2.5 rounded-full bg-white/10 border border-white/20 text-[#FAF3E1] placeholder-[#FAF3E1]/40 text-xs focus:outline-none focus:border-[#D1A22A] transition-colors font-bahnschrift" />
+            </div>
+            <button 
+              type="submit" 
+              class="w-full sm:w-auto px-6 py-2.5 rounded-full bg-[#D1A22A] hover:bg-[#E0B548] text-black font-bold text-xs uppercase tracking-wider transition-all shrink-0 font-bahnschrift shadow-sm">
+              Notify Me
+            </button>
+          </form>
+          <p id="notify-feedback" class="text-[11px] text-[#D1A22A] mt-2 hidden font-bahnschrift">
+            <i class="ph ph-check-circle"></i> Thank you! We'll email you the moment our doors reopen.
+          </p>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-[#FAF3E1]/10 py-10 text-xs text-[#FAF3E1]/60 font-bahnschrift">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© 2026 Nectar &amp; Hive. All rights reserved. Crafted in Sherwood, Durban, South Africa.</p>
+        <div class="flex items-center gap-4 text-sm text-[#D1A22A]">
+          <a href="https://wa.me/27827736543" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="WhatsApp (+27 82 773 6543)">
+            <i class="ph ph-whatsapp-logo text-base"></i>
+          </a>
+          <a href="https://www.instagram.com/nectar_n_hive" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="Instagram (@nectar_n_hive)">
+            <i class="ph ph-instagram-logo text-base"></i>
+          </a>
+          <a href="mailto:nectarnhive@gmail.com" class="hover:text-white transition-colors" title="Email: nectarnhive@gmail.com">
+            <i class="ph ph-envelope text-base"></i>
+          </a>
+          <a href="tel:+27827736543" class="hover:text-white transition-colors" title="Phone: +27 82 773 6543">
+            <i class="ph ph-phone text-base"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function handleNotifySubmit(e) {
+        e.preventDefault();
+        const input = document.getElementById('notify-email');
+        const feedback = document.getElementById('notify-feedback');
+        const email = input.value.trim();
+        if (email) {
+          try {
+            const list = JSON.parse(localStorage.getItem('nectar_maintenance_subscribers') || '[]');
+            if (!list.includes(email)) list.push(email);
+            localStorage.setItem('nectar_maintenance_subscribers', JSON.stringify(list));
+          } catch (err) {}
+          input.value = '';
+          feedback.classList.remove('hidden');
+        }
+      }
+    </script>
+  </body>
+</html>
