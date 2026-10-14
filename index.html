@@ -118,94 +118,6 @@
         letter-spacing: -0.02em;
       }
 
-      /* Luminous Gradient Canvas */
-      .hero-gradient-canvas {
-        background-color: #000000;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .light-orb {
-        position: absolute;
-        border-radius: 9999px;
-        pointer-events: none;
-        mix-blend-mode: screen;
-        will-change: transform, opacity;
-      }
-
-      .orb-ochre-top {
-        width: 480px;
-        height: 480px;
-        background: radial-gradient(circle, rgba(209, 162, 42, 0.95) 0%, rgba(209, 162, 42, 0.7) 40%, rgba(209, 162, 42, 0.15) 65%, transparent 80%);
-        filter: blur(85px);
-        top: -80px;
-        right: 12%;
-        opacity: 0.9;
-        animation: floatOrbTop 16s ease-in-out infinite alternate;
-      }
-
-      .orb-linen-mid {
-        width: 420px;
-        height: 420px;
-        background: radial-gradient(circle, rgba(250, 243, 225, 0.9) 0%, rgba(245, 231, 198, 0.65) 45%, rgba(209, 162, 42, 0.2) 70%, transparent 80%);
-        filter: blur(95px);
-        top: 20%;
-        right: 2%;
-        opacity: 0.85;
-        animation: floatOrbMid 19s ease-in-out infinite alternate;
-      }
-
-      .orb-ochre-bot {
-        width: 520px;
-        height: 520px;
-        background: radial-gradient(circle, rgba(209, 162, 42, 0.9) 0%, rgba(224, 181, 72, 0.65) 45%, rgba(209, 162, 42, 0.15) 70%, transparent 80%);
-        filter: blur(100px);
-        bottom: -100px;
-        right: 18%;
-        opacity: 0.85;
-        animation: floatOrbBot 22s ease-in-out infinite alternate;
-      }
-
-      .orb-ambient-left {
-        width: 380px;
-        height: 380px;
-        background: radial-gradient(circle, rgba(245, 231, 198, 0.35) 0%, rgba(209, 162, 42, 0.2) 50%, transparent 75%);
-        filter: blur(90px);
-        top: 30%;
-        left: -60px;
-        opacity: 0.5;
-        animation: floatOrbLeft 20s ease-in-out infinite alternate;
-      }
-
-      @media (min-width: 1024px) {
-        .orb-ochre-top { width: 580px; height: 580px; filter: blur(105px); }
-        .orb-linen-mid { width: 500px; height: 500px; filter: blur(110px); }
-        .orb-ochre-bot { width: 620px; height: 620px; filter: blur(120px); }
-      }
-
-      @keyframes floatOrbTop {
-        0% { transform: translate(0, 0) scale(1); }
-        50% { transform: translate(35px, 25px) scale(1.08); }
-        100% { transform: translate(-25px, 45px) scale(0.96); }
-      }
-
-      @keyframes floatOrbMid {
-        0% { transform: translate(0, 0) scale(1); }
-        50% { transform: translate(-45px, -30px) scale(1.12); }
-        100% { transform: translate(30px, 25px) scale(0.94); }
-      }
-
-      @keyframes floatOrbBot {
-        0% { transform: translate(0, 0) scale(1); }
-        50% { transform: translate(30px, -35px) scale(1.06); }
-        100% { transform: translate(-35px, -20px) scale(1.12); }
-      }
-
-      @keyframes floatOrbLeft {
-        0% { transform: translate(0, 0) scale(1); }
-        100% { transform: translate(30px, 40px) scale(1.1); }
-      }
-
       /* View Animations */
       .view-fade {
         animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -229,7 +141,7 @@
           <div class="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden flex items-center justify-center shrink-0 border border-[#D1A22A]/30 bg-white">
             <img 
               src="/images/logo.svg" 
-              alt="Nectar and; Hive Logo" 
+              alt="Nectar and Hive Logo" 
               class="w-full h-full object-cover rounded-full"
               onerror="this.onerror=null; this.src='/images/Untitled-3.png';"
             />
@@ -256,13 +168,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow flex items-center justify-center py-16 sm:py-24 relative hero-gradient-canvas">
-      <!-- Luminous Gradient Light Orbs -->
-      <div class="light-orb orb-ochre-top"></div>
-      <div class="light-orb orb-linen-mid"></div>
-      <div class="light-orb orb-ochre-bot"></div>
-      <div class="light-orb orb-ambient-left"></div>
-
+    <main class="flex-grow flex items-center justify-center py-16 sm:py-24 relative">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center flex flex-col items-center z-10 view-fade">
         
         <!-- Pulsing Bee Emblem Badge -->
