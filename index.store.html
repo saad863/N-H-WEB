@@ -5,18 +5,19 @@
 <!-- Welcome! This website was designed to be easy for you to manage and edit. -->
 <!-- Below is a quick directory of where everything is located in this file:   -->
 <!--                                                                           -->
-<!-- 0. 🚧 MAINTENANCE MODE SWITCH (TURN ON WHILE EDITING):                    -->
-<!--    Whenever you want to update prices or photos without visitors seeing   -->
-<!--    work-in-progress, you can turn on the Maintenance Page:                -->
-<!--    • OPTION A (In Code): In 'STORE_CONFIG' (~line 1980), set:             -->
-<!--      maintenanceMode: true    (shows the maintenance screen to visitors)  -->
-<!--      maintenanceMode: false   (opens the live store to the public)        -->
-<!--    • OPTION B (In Browser Quick Toggle): Press [Alt + M] on your keyboard -->
-<!--      or click 'Maintenance' in the footer, or go to '#maintenance' in     -->
-<!--      your browser. This opens the Owner Control panel with live preview!  -->
+<!-- 0. 🚧 HOW TO TURN MAINTENANCE MODE ON & OFF (FILE SWAP):                  -->
+<!--    We created a dedicated 'index.maintenance.html' file for your site!   -->
+<!--    • TO TURN MAINTENANCE MODE ON:                                         -->
+<!--      1. Rename 'index.html' to 'index.store.html'                         -->
+<!--      2. Copy/rename 'index.maintenance.html' to 'index.html'              -->
+<!--      Visitors will now see the maintenance screen with WhatsApp ordering! -->
+<!--    • TO TURN MAINTENANCE MODE OFF (REOPEN STORE):                         -->
+<!--      1. Rename 'index.html' back to 'index.maintenance.html'              -->
+<!--      2. Rename 'index.store.html' back to 'index.html'                    -->
+<!--      Your live store is reopened!                                         -->
 <!--                                                                           -->
 <!-- 1. ⚙️ STORE CONFIGURATION & WHATSAPP:                                      -->
-<!--    Scroll down to the <script> section (~line 1980). You'll find          -->
+<!--    Scroll down to the <script> section (~line 1850). You'll find          -->
 <!--    'const STORE_CONFIG' where you can change your WhatsApp phone number,  -->
 <!--    email, address, and delivery rates in ONE central spot:                -->
 <!--    • Local Pickup (Sherwood, Durban): Free                                -->
@@ -24,7 +25,7 @@
 <!--    • Outside Areas & Nationwide: Confirmed with seller via WhatsApp       -->
 <!--                                                                           -->
 <!-- 2. 🍯 PRODUCTS DATABASE & PRICES:                                          -->
-<!--    Right below 'STORE_CONFIG' (~line 2030), you'll find 'const products'. -->
+<!--    Right below 'STORE_CONFIG' (~line 1890), you'll find 'const products'. -->
 <!--    Here you can:                                                          -->
 <!--    - Change prices across bottle sizes (250g, 500g, 1kg)                  -->
 <!--    - Mark an item in/out of stock (set inStock: true or inStock: false)   -->
@@ -57,7 +58,13 @@
     <meta property="og:description" content="Artisanal, raw single-origin honey crafted by nature and perfected by bees in Sherwood, Durban, KwaZulu-Natal, South Africa." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+
+    <!-- Browser Tab Icon / Favicons (Universal Cross-Browser Support) -->
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
 
     <!-- Typography: Galano Grotesque / Bahnschrift & geometric grotesque alternates -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1287,124 +1294,6 @@
         </div>
       </section>
 
-      <!-- ========================================================================= -->
-      <!-- VIEW 9: CURRENTLY IN MAINTENANCE VIEW                                     -->
-      <!-- ========================================================================= -->
-      <section id="view-maintenance" class="hidden view-fade relative hero-gradient-canvas border-b border-black min-h-[85vh] flex items-center justify-center py-20 sm:py-28 overflow-hidden">
-        
-        <!-- Luminous Gradient Light Orbs matching Hero Brand Aesthetics -->
-        <div class="light-orb orb-ochre-top"></div>
-        <div class="light-orb orb-linen-mid"></div>
-        <div class="light-orb orb-ochre-bot"></div>
-        <div class="light-orb orb-ambient-left"></div>
-
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center flex flex-col items-center z-10">
-          
-          <!-- Honeycomb / Bee Artisanal Pulsing Icon Badge -->
-          <div class="relative mb-6">
-            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#D1A22A]/15 border border-[#D1A22A]/35 flex items-center justify-center text-[#D1A22A] mx-auto shadow-[0_0_40px_rgba(209,162,42,0.35)] backdrop-blur-sm">
-              <i class="ph-fill ph-drop text-4xl sm:text-5xl text-[#D1A22A] animate-pulse"></i>
-            </div>
-            <div class="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-black border border-[#D1A22A] flex items-center justify-center text-xs text-[#FAF3E1] shadow-md" title="Site Under Maintenance">
-              <i class="ph ph-wrench text-sm text-[#D1A22A]"></i>
-            </div>
-          </div>
-
-          <!-- Kicker Tagline -->
-          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-black/60 border border-[#D1A22A]/40 text-[#D1A22A] text-xs font-semibold tracking-[0.24em] uppercase font-bahnschrift mb-6 select-none backdrop-blur-md">
-            <span class="w-2 h-2 rounded-full bg-[#D1A22A] animate-ping"></span>
-            <span>Tending to the Hives · Site in Maintenance</span>
-          </div>
-
-          <!-- Main Heading -->
-          <h1 class="font-display text-4xl sm:text-6xl font-bold text-[#FAF3E1] tracking-tight leading-[1.12] mb-5 text-balance drop-shadow-sm">
-            Currently in Maintenance.<br />
-            <span class="font-light font-normal text-[#F5E7C6]">Perfecting Our Next Harvest.</span>
-          </h1>
-
-          <!-- Description Message -->
-          <p class="text-base sm:text-lg text-[#FAF3E1]/85 max-w-2xl mx-auto leading-relaxed font-light mb-8 font-bahnschrift text-balance">
-            We are briefly updating our online boutique and preparing our seasonal batches of 100% raw, cold-extracted South African honey in Sherwood, Durban. We will be back online shortly!
-          </p>
-
-          <!-- Current Status / Notice Box -->
-          <div class="w-full max-w-lg mb-8 p-4 rounded-xl bg-black/50 border border-[#D1A22A]/30 backdrop-blur-md text-xs text-[#FAF3E1]/90 flex items-center gap-3 text-left font-bahnschrift shadow-lg">
-            <div class="w-8 h-8 rounded-lg bg-[#D1A22A]/20 flex items-center justify-center shrink-0 text-[#D1A22A]">
-              <i class="ph ph-clock-countdown text-lg"></i>
-            </div>
-            <div class="flex-1">
-              <div class="font-semibold text-[#D1A22A] uppercase tracking-wider text-[10px]">Current Status:</div>
-              <div id="maintenance-status-notice">Scheduled site maintenance &amp; catalog update. Store reopening soon.</div>
-            </div>
-          </div>
-
-          <!-- Urgent Honey Order Card: Direct WhatsApp & Phone -->
-          <div class="w-full max-w-lg p-6 sm:p-7 rounded-2xl bg-[#000000]/70 border border-[#D1A22A]/40 backdrop-blur-lg shadow-[0_10px_35px_rgba(0,0,0,0.5)] mb-8 text-left font-bahnschrift space-y-4">
-            <div class="flex items-center justify-between border-b border-[#FAF3E1]/10 pb-3">
-              <div class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                <h3 class="text-sm font-bold text-[#FAF3E1] uppercase tracking-wider">Need Honey Today?</h3>
-              </div>
-              <span class="text-[11px] text-[#D1A22A]">Sherwood, Durban</span>
-            </div>
-            <p class="text-xs text-[#FAF3E1]/80 leading-relaxed font-light">
-              Our bees never sleep! You can still place raw honey orders, arrange free local collection in Sherwood, or enquire about nationwide courier dispatch directly on WhatsApp.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
-              <a 
-                href="https://wa.me/27827736543?text=Hello%20Nectar%20%26%20Hive%2C%20I%20noticed%20the%20website%20is%20in%20maintenance.%20I%20would%20like%20to%20order%20raw%20honey" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="flex-1 py-3 px-5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs tracking-wide rounded-full shadow-md transition-all flex items-center justify-center gap-2 text-center">
-                <i class="ph ph-whatsapp-logo text-base"></i>
-                <span>Order on WhatsApp (+27 82 773 6543)</span>
-              </a>
-              <a 
-                href="tel:+27827736543" 
-                class="py-3 px-4 bg-white/10 hover:bg-white/15 text-[#FAF3E1] font-semibold text-xs rounded-full border border-white/15 transition-colors flex items-center justify-center gap-1.5 text-center">
-                <i class="ph ph-phone text-sm text-[#D1A22A]"></i>
-                <span>Call Us</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Get Notified When We Reopen -->
-          <div class="w-full max-w-md mb-8">
-            <form onsubmit="handleMaintenanceSubscribe(event)" class="flex flex-col sm:flex-row items-center gap-2">
-              <div class="relative w-full">
-                <i class="ph ph-envelope-simple absolute left-3.5 top-1/2 -translate-y-1/2 text-[#FAF3E1]/40 text-sm"></i>
-                <input 
-                  type="email" 
-                  id="maintenance-notify-email" 
-                  required 
-                  placeholder="Enter email to get notified when live" 
-                  class="w-full pl-10 pr-4 py-2.5 rounded-full bg-white/10 border border-white/20 text-[#FAF3E1] placeholder-[#FAF3E1]/40 text-xs focus:outline-none focus:border-[#D1A22A] transition-colors font-bahnschrift" />
-              </div>
-              <button 
-                type="submit" 
-                class="w-full sm:w-auto px-6 py-2.5 rounded-full bg-[#D1A22A] hover:bg-[#E0B548] text-black font-bold text-xs uppercase tracking-wider transition-all shrink-0 font-bahnschrift shadow-sm">
-                Notify Me
-              </button>
-            </form>
-            <p id="maintenance-notify-feedback" class="text-[11px] text-[#D1A22A] mt-2 hidden font-bahnschrift">
-              <i class="ph ph-check-circle"></i> Thank you! We'll email you the moment our doors reopen.
-            </p>
-          </div>
-
-          <!-- Site Owner Bypass Trigger -->
-          <div class="pt-4 border-t border-white/10 w-full max-w-xs flex items-center justify-center gap-4 text-xs font-bahnschrift">
-            <button 
-              onclick="openMaintenanceModal()" 
-              class="text-[#FAF3E1]/50 hover:text-[#D1A22A] underline flex items-center gap-1.5 transition-colors">
-              <i class="ph ph-lock-key"></i>
-              <span>Site Owner / Admin Access</span>
-            </button>
-          </div>
-
-        </div>
-      </section>
-
     </main>
 
     <!-- SHOPPING CART SLIDE-OUT DRAWER -->
@@ -1698,140 +1587,6 @@
       <!-- Toasts dynamically appended here -->
     </div>
 
-    <!-- ========================================================================= -->
-    <!-- 🚧 OWNER MAINTENANCE MODE CONTROL MODAL                                   -->
-    <!-- ========================================================================= -->
-    <div id="maintenance-modal" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-      <div class="bg-[#FAF3E1] text-[#000000] rounded-2xl shadow-luxury max-w-md w-full p-6 sm:p-8 relative border border-[#D1A22A]/30">
-        <button 
-          onclick="closeMaintenanceModal()" 
-          class="absolute top-5 right-5 p-2 text-[#000000]/60 hover:text-[#000000] rounded-md transition-colors"
-          aria-label="Close modal">
-          <i class="ph ph-x text-lg"></i>
-        </button>
-
-        <div class="mb-5 flex items-start gap-3.5">
-          <div class="w-11 h-11 rounded-xl bg-[#D1A22A]/20 text-[#D1A22A] flex items-center justify-center shrink-0 border border-[#D1A22A]/40">
-            <i class="ph ph-shield-warning text-2xl"></i>
-          </div>
-          <div>
-            <div class="text-[11px] font-bold uppercase tracking-wider text-[#D1A22A] font-bahnschrift">Site Administration</div>
-            <h3 class="font-display text-2xl font-bold text-[#000000]">Maintenance Mode</h3>
-          </div>
-        </div>
-
-        <p class="text-xs text-[#000000]/75 leading-relaxed font-bahnschrift mb-5">
-          Turn on Maintenance Mode whenever you need to edit prices, photos, or text. Visitors will see the &ldquo;Tending to the Hives&rdquo; maintenance screen with your WhatsApp ordering button.
-        </p>
-
-        <!-- Current Status Banner -->
-        <div id="modal-status-badge" class="p-4 rounded-xl mb-5 flex items-center justify-between border font-bahnschrift bg-[#F5E7C6] border-[#D1A22A]/40">
-          <div class="flex items-center gap-2.5">
-            <span id="modal-status-indicator" class="w-3 h-3 rounded-full bg-emerald-500"></span>
-            <div>
-              <div class="text-[10px] uppercase font-bold text-[#000000]/60">Status</div>
-              <div id="modal-status-text" class="text-sm font-bold text-[#000000]">Store is Live (Off)</div>
-            </div>
-          </div>
-          <button 
-            id="modal-toggle-btn"
-            onclick="handleMaintenanceToggleClick()"
-            class="px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-wider transition-all font-bahnschrift shadow-sm bg-[#000000] text-[#FAF3E1] hover:bg-[#262626]">
-            Turn ON
-          </button>
-        </div>
-
-        <!-- Custom Notice Input -->
-        <div class="space-y-1.5 mb-5 font-bahnschrift">
-          <label class="block text-xs font-semibold text-[#000000]">
-            Notice Displayed to Customers (Optional):
-          </label>
-          <input 
-            type="text" 
-            id="maintenance-custom-notice-input" 
-            placeholder="e.g. Updating seasonal harvest stock. Back at 2:00 PM!" 
-            class="w-full px-3.5 py-2.5 bg-white border border-[#D1A22A]/30 rounded-lg text-xs text-[#000000] placeholder-[#000000]/40 focus:outline-none focus:border-[#D1A22A] transition-colors" />
-        </div>
-
-        <!-- Passcode Area (Shown if locked) -->
-        <div id="modal-passcode-section" class="hidden space-y-2 mb-5 p-3.5 bg-white/70 rounded-xl border border-amber/15 font-bahnschrift text-xs">
-          <div class="flex items-center justify-between">
-            <label class="font-semibold text-amber-deep">Owner Passcode:</label>
-            <span class="text-[10px] text-amber/60">Default: nectar2026</span>
-          </div>
-          <div class="flex gap-2">
-            <input 
-              type="password" 
-              id="owner-passcode-input" 
-              placeholder="Enter passcode (nectar2026)" 
-              class="flex-1 px-3 py-2 border border-amber/20 rounded-md focus:outline-none focus:border-[#D1A22A] text-xs" />
-            <button 
-              onclick="unlockOwnerAdmin()" 
-              class="px-4 py-2 bg-[#D1A22A] hover:bg-[#E0B548] text-black font-bold text-xs rounded-md">
-              Unlock
-            </button>
-          </div>
-          <p id="owner-passcode-error" class="text-[11px] text-rose-600 hidden">Incorrect passcode. Please try again.</p>
-        </div>
-
-        <!-- Action Buttons -->
-        <div class="space-y-2.5 pt-2 border-t border-[#000000]/10 font-bahnschrift">
-          <div class="flex items-center gap-2">
-            <button 
-              id="modal-preview-btn"
-              onclick="previewLiveAsOwner()" 
-              class="flex-1 py-2.5 px-3 bg-white hover:bg-neutral-50 text-[#000000] border border-[#000000]/20 font-semibold text-xs rounded-lg transition-colors flex items-center justify-center gap-1.5 shadow-sm">
-              <i class="ph ph-eye text-base text-[#D1A22A]"></i>
-              <span>Owner Preview (Bypass)</span>
-            </button>
-            <button 
-              onclick="previewAsVisitor()" 
-              class="py-2.5 px-3 bg-white hover:bg-neutral-50 text-[#000000] border border-[#000000]/20 font-semibold text-xs rounded-lg transition-colors text-xs flex items-center justify-center gap-1.5 shadow-sm">
-              <i class="ph ph-users text-base"></i>
-              <span>View as Visitor</span>
-            </button>
-          </div>
-
-          <!-- Code editing note -->
-          <div class="p-3 bg-black/5 rounded-lg text-[11px] text-[#000000]/70 leading-relaxed">
-            💡 <strong>Code Tip:</strong> You can also make this permanent by editing <code>index.html</code>: scroll to <code>STORE_CONFIG</code> (~line 1820) and set <code>maintenanceMode: true</code>.
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ========================================================================= -->
-    <!-- 🚧 FLOATING OWNER MAINTENANCE MODE BANNER                                  -->
-    <!-- ========================================================================= -->
-    <div 
-      id="owner-maintenance-banner" 
-      class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 hidden bg-[#000000]/95 backdrop-blur-md border border-[#D1A22A] text-[#FAF3E1] px-5 py-2.5 rounded-full shadow-[0_10px_35px_rgba(0,0,0,0.5)] flex items-center gap-3.5 text-xs font-bahnschrift max-w-[94vw] sm:max-w-none">
-      <div class="flex items-center gap-2 shrink-0">
-        <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping"></span>
-        <span>🚧 <strong>Maintenance Mode is ON</strong></span>
-        <span class="hidden md:inline text-[#FAF3E1]/60">· Visitors see Maintenance Page</span>
-      </div>
-      <div class="flex items-center gap-2 shrink-0">
-        <button 
-          onclick="previewAsVisitor()" 
-          class="px-2.5 py-1 bg-white/10 hover:bg-white/20 text-[#FAF3E1] text-[11px] rounded-full transition-colors">
-          View as Visitor
-        </button>
-        <button 
-          onclick="toggleMaintenanceMode(false)" 
-          class="px-3 py-1 bg-[#D1A22A] hover:bg-[#E0B548] text-black font-bold text-[11px] rounded-full transition-colors shadow-sm">
-          Turn OFF
-        </button>
-        <button 
-          onclick="openMaintenanceModal()" 
-          class="p-1 text-[#FAF3E1]/70 hover:text-[#D1A22A] transition-colors"
-          title="Open Settings">
-          <i class="ph ph-gear text-sm"></i>
-        </button>
-      </div>
-    </div>
-
     <!-- STICKY MOBILE CTA BAR (Visible on mobile screens) -->
     <div id="sticky-mobile-cta" class="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-white/95 backdrop-blur-md border-t border-amber/15 p-3 flex items-center gap-3 shadow-lg transition-transform duration-300">
       <button 
@@ -1928,7 +1683,6 @@
           <p>
             © 2026 Nectar &amp; Hive. All rights reserved. Crafted in Sherwood, Durban, South Africa.
             <button onclick="openCookieBanner()" class="ml-2 hover:text-[#D1A22A] underline transition-colors">Cookie Preferences</button>
-            <button onclick="openMaintenanceModal()" class="ml-2.5 hover:text-[#D1A22A] text-[#FAF3E1]/50 hover:text-opacity-100 transition-colors inline-flex items-center gap-1"><i class="ph ph-shield-check text-xs"></i> Maintenance</button>
           </p>
           <div class="flex items-center gap-4 text-base text-[#D1A22A]">
             <a href="https://wa.me/27827736543" target="_blank" aria-label="WhatsApp" class="hover:text-white transition-colors" title="WhatsApp (+27 82 773 6543)"><i class="ph ph-whatsapp-logo"></i></a>
@@ -1952,12 +1706,6 @@
       /* and shipping rates across the ENTIRE website in this one place!           */
       /* ========================================================================= */
       const STORE_CONFIG = {
-        // 🚧 MAINTENANCE MODE SWITCH:
-        // Set to true whenever you are editing the site to turn on the Maintenance Page!
-        // Set to false when your site is live and open for orders.
-        maintenanceMode: true,
-        maintenanceNotice: "Scheduled site maintenance & catalog update. Store reopening soon.",
-
         // Business Name & Location
         brandName: "Nectar & Hive",
         storeLocation: "Sherwood, Durban, KwaZulu-Natal, South Africa",
