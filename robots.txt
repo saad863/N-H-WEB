@@ -1,0 +1,6 @@
+# robots.txt for Nectar & Hive (Sherwood, Durban, South Africa)
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://nectar-and-hive.co.za/sitemap.xml

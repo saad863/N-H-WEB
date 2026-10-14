@@ -1,0 +1,8 @@
+{
+  "name": "Nectar \u0026 Hive | Pure South African Honey",
+  "description": "Artisanal, raw single-origin honey crafted by nature and perfected by bees in Sherwood, Durban, KwaZulu-Natal, South Africa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

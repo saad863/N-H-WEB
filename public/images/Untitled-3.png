@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Background Badge -->
+  <rect width="300" height="300" rx="60" fill="#1C1814" />
+  
+  <!-- Antennae (Gold) -->
+  <path d="M 142 82 C 134 56, 122 36, 104 32 C 100 31, 98 35, 102 38 C 114 46, 124 64, 134 82" 
+        fill="#D2A22A" />
+  <path d="M 158 82 C 166 56, 178 36, 196 32 C 200 31, 202 35, 198 38 C 186 46, 176 64, 166 82" 
+        fill="#D2A22A" />
+        
+  <!-- Head (White Circle) -->
+  <circle cx="150" cy="98" r="23" fill="#FFFFFF" />
+
+  <!-- Thorax / Wings Contour (Gold) -->
+  <!-- Left wing loop & Top arch -->
+  <path d="M 139 135 C 105 135, 62 152, 62 188 C 62 216, 92 225, 112 218" 
+        fill="none" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+        
+  <!-- Right wing loop & Top arch -->
+  <path d="M 161 135 C 195 135, 238 152, 238 188 C 238 216, 208 225, 188 218" 
+        fill="none" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Top bridge curve swooping into center monogram -->
+  <path d="M 125 140 C 135 133, 145 132, 150 134 C 155 136, 160 142, 160 152" 
+        fill="none" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" />
+
+  <!-- Monogram: 'N' and 'H' interwoven -->
+  <!-- 'N' Left Stem -->
+  <line x1="104" y1="158" x2="104" y2="216" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" />
+  
+  <!-- 'N' Diagonal connecting down to center stem -->
+  <path d="M 104 158 L 148 216" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Center shared stem (N right stem / H left stem with top hook) -->
+  <path d="M 148 135 C 148 140, 148 150, 148 216" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" />
+  
+  <!-- 'H' Crossbar -->
+  <line x1="148" y1="184" x2="196" y2="184" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" />
+  
+  <!-- 'H' Right Stem -->
+  <line x1="196" y1="152" x2="196" y2="216" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" />
+
+  <!-- Bottom Abdomen Arc & Stinger (White) -->
+  <path d="M 112 232 C 122 250, 136 256, 150 256 C 164 256, 178 250, 188 232" 
+        fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+  <line x1="150" y1="256" x2="150" y2="272" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+</svg>
