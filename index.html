@@ -1443,14 +1443,14 @@
           <div class="space-y-4">
             <h2 class="font-display text-lg font-bold text-amber-deep">4. Ordering &amp; Payment Terms</h2>
             <p>
-              Final order confirmation, invoice generation, and bank payment coordinates (Instant EFT or direct bank deposit) are coordinated directly via WhatsApp (+27 82 773 6543). Honey jars are dispatched once payment confirmation is verified.
+              Final order confirmation, invoice generation, and bank payment coordinates (Instant EFT or direct bank deposit) are coordinated directly via WhatsApp (+27 82 773 6543). Products are dispatched once payment confirmation is verified.
             </p>
           </div>
 
           <div class="space-y-4">
             <h2 class="font-display text-lg font-bold text-amber-deep">5. Damaged Goods &amp; Food Safety</h2>
             <p>
-              Every jar is inspected and packaged securely in protective transit wrap. If a glass jar arrives broken or damaged due to courier mishandling, please send photographic evidence via WhatsApp within 24 hours of receipt, and we will promptly dispatch a replacement jar or provide a full refund. Due to food hygiene and safety standards, opened honey jars cannot be returned.
+              Every jar is inspected and packaged securely in protective transit wrap. If a glass jar arrives broken or damaged due to courier mishandling, please send photographic evidence via WhatsApp within 24 hours of receipt, and we will promptly dispatch a replacement jar or provide a full refund. Due to food hygiene and safety standards, opened honey jars and tea boxes cannot be returned.
             </p>
           </div>
 
@@ -1718,7 +1718,7 @@
           <i class="ph ph-trash text-2xl"></i>
         </div>
         <div class="space-y-1">
-          <h4 class="font-display text-lg font-bold text-amber-deep">Remove Honey Jar?</h4>
+          <h4 class="font-display text-lg font-bold text-amber-deep">Remove Item?</h4>
           <p class="text-xs text-[#877C6B] leading-relaxed" id="confirm-remove-text">
             Are you sure you want to remove this jar from your collection bag?
           </p>
@@ -1732,7 +1732,7 @@
           <button 
             onclick="executeRemoveCartItem()" 
             class="flex-1 py-2.5 bg-rose-600 hover:bg-rose-700 text-white font-semibold text-xs rounded-lg transition-colors font-bahnschrift shadow-sm">
-            Remove Jar
+            Remove
           </button>
         </div>
       </div>
@@ -1757,7 +1757,7 @@
             Cookie Preferences
           </h4>
           <p id="cookie-desc" class="text-xs text-[#2D322F]/85 mt-1 leading-relaxed font-light">
-            This site uses cookies to ensure smooth browsing, remember your honey jar selections, and facilitate direct WhatsApp orders.
+            This site uses cookies to ensure smooth browsing, remember your honey jar and tea selections, and facilitate direct WhatsApp orders.
           </p>
         </div>
         <button 
@@ -3254,7 +3254,7 @@
 
         saveCart();
         updateCartBadge();
-        showToast('Added to Honey Bag', `${qty}× ${product.name} (${sizeData.weight})`, 'cart');
+        showToast('Added to Bag', `${qty}× ${product.name} (${sizeData.weight})`, 'cart');
         toggleCartDrawer(true);
       }
 
@@ -3311,7 +3311,7 @@
         const textEl = document.getElementById('confirm-remove-text');
 
         if (textEl && item) {
-          textEl.textContent = `Are you sure you want to remove "${item.name} (${item.weight || item.size})" from your honey bag?`;
+          textEl.textContent = `Are you sure you want to remove "${item.name} (${item.weight || item.size})" from your bag?`;
         }
         if (modal) {
           modal.classList.remove('hidden');
@@ -3460,7 +3460,7 @@
               <button 
                 onclick="promptRemoveFromCart('${itemKey}')"
                 class="text-amber/40 hover:text-rose-600 text-xs transition-colors p-1"
-                title="Remove jar"
+                title="Remove"
                 aria-label="Remove ${item.name} from bag">
                 <i class="ph ph-trash"></i>
               </button>
@@ -4000,7 +4000,7 @@ _My delivery address / contact details:_
       function acceptCookies() {
         setCookie('nectar_cookie_consent', 'accepted', 365);
         hideCookieBanner();
-        showToast('Cookies Accepted', 'Your browsing and honey bag preferences are saved.', 'success');
+        showToast('Cookies Accepted', 'Your browsing and checkout bag preferences are saved.', 'success');
       }
 
       function rejectCookies() {
