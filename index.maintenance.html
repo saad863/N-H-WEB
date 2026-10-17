@@ -142,7 +142,7 @@
       }
       @font-face {
         font-family: 'Galano Grotesque';
-        src: local('Gelano Grotesque Bold'), local('Galano Grotesque Bold'), local('Gelano Grotesque-Bold'), local('Galano Grotesque-Bold'), local('GalanoGrotesque-Bold');
+        src: local('Gelano Grotesque Regular'), local('Galano Grotesque Regular'), local('Gelano Grotesque-Regular'), local('Galano Grotesque-Regular'), local('Gelano Grotesque'), local('Galano Grotesque'), local('GalanoGrotesque-Regular'), local('GalanoGrotesque');
         font-weight: 600 800;
         font-display: swap;
       }
@@ -155,7 +155,7 @@
       }
       @font-face {
         font-family: 'Galano Grotesque Alt Light';
-        src: local('Gelano Grotesque Alt Light'), local('Galano Grotesque Alt Light'), local('Gelano Grotesque Alt-Light'), local('Galano Grotesque Alt-Light'), local('GelanoGrotesqueAlt-Light'), local('GalanoGrotesqueAlt-Light'), local('Gelano Grotesque Alt'), local('Galano Grotesque Alt'), local('Galano Grotesque Light'), local('Gelano Grotesque Light');
+        src: local('Gelano Grotesque Alt Light'), local('Galano Grotesque Alt Light'), local('Gelano Grotesque Alt-Light'), local('Galano Grotesque Alt-Light'), local('GelanoGrotesqueAlt-Light'), local('GalanoGrotesqueAlt-Light'), local('Gelano Grotesque Alt'), local('Galano Grotesque Alt'), local('Galano Grotesque Light'), local('Galano Grotesque Light');
         font-weight: 200 300;
         font-display: swap;
       }
@@ -169,6 +169,23 @@
         font-family: 'Bahnschrift';
         src: local('Bahnschrift'), local('Bahnschrift Regular'), local('Bahnschrift-Regular');
         font-display: swap;
+      }
+
+      /* No Bold Fonts: Regular (400) or Light (300) only */
+      html, body, button, a, input, select, textarea, p, span, div, label {
+        font-weight: 400;
+      }
+      h1, h2, h3, h4, h5, h6, .brand-title, .font-display {
+        font-weight: 400 !important;
+      }
+      .font-bold, .font-semibold, .font-extrabold, .font-black, b, strong {
+        font-weight: 400 !important;
+      }
+      .font-light, .font-thin, .brand-name-alt-light {
+        font-weight: 300 !important;
+      }
+      .font-normal, .font-regular, .brand-name-regular {
+        font-weight: 400 !important;
       }
 
       .brand-name-regular {
@@ -231,8 +248,8 @@
       <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 sm:gap-6">
         
         <!-- Brand Wordmark & Logo -->
-        <div class="flex items-center gap-2 sm:gap-3.5 min-w-0">
-          <div class="brand-logo-circle w-11 h-11 sm:w-16 sm:h-16 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+        <div class="flex items-center gap-2 sm:gap-3.5 shrink-0">
+          <div class="brand-logo-circle w-11 h-11 sm:w-13 sm:h-13 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden flex items-center justify-center shrink-0">
             <img 
               src="images/logo.svg" 
               alt="NECTAR AND HIVE" 
@@ -241,8 +258,8 @@
               onerror="this.onerror=null; this.src='images/Untitled-3.png';"
             />
           </div>
-          <div class="flex flex-col min-w-0">
-            <span class="text-base sm:text-2xl tracking-tight text-[#2D322F] whitespace-nowrap">
+          <div class="flex flex-col shrink-0">
+            <span class="text-base sm:text-lg md:text-xl lg:text-2xl tracking-tight text-[#2D322F] whitespace-nowrap">
               <span class="brand-name-regular">NECTAR AND</span> <span class="brand-name-alt-light">HIVE</span>
             </span>
           </div>

@@ -66,7 +66,7 @@
     
     <title>NECTAR AND HIVE | Pure South African Honey · KZN</title>
     <meta name="description" content="Artisanal, raw single-origin honey crafted by nature and perfected by bees in Durban, KwaZulu-Natal, South Africa by NECTAR AND HIVE." />
-    <meta property="og:title" content="NECTAR AND HIVE | Discover Our Pure South African Honey AND Katepa Tea" />
+    <meta property="og:title" content="NECTAR AND HIVE | Pure South African Honey" />
     <meta property="og:description" content="Artisanal, raw single-origin honey crafted by nature and perfected by bees in Durban, KwaZulu-Natal, South Africa by NECTAR AND HIVE." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -188,8 +188,8 @@
       <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 sm:gap-6">
         
         <!-- Brand Wordmark & Logo (Sharp Square) -->
-        <a href="#home" onclick="navigateTo('home'); return false;" class="flex items-center gap-2 sm:gap-3.5 group min-w-0">
-          <div class="brand-logo-circle w-11 h-11 sm:w-16 sm:h-16 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+        <a href="#home" onclick="navigateTo('home'); return false;" class="flex items-center gap-2 sm:gap-3.5 group shrink-0">
+          <div class="brand-logo-circle w-11 h-11 sm:w-13 sm:h-13 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden flex items-center justify-center shrink-0">
             <img 
               src="images/logo.svg" 
               alt="NECTAR AND HIVE" 
@@ -198,31 +198,31 @@
               onerror="this.onerror=null; this.src='images/Untitled-3.png';"
             />
           </div>
-          <div class="flex flex-col min-w-0">
-            <span class="text-base sm:text-2xl tracking-tight text-[#2D322F] group-hover:text-[#D1A22A] transition-colors whitespace-nowrap">
+          <div class="flex flex-col shrink-0">
+            <span class="text-base sm:text-lg md:text-xl lg:text-2xl tracking-tight text-[#2D322F] group-hover:text-[#D1A22A] transition-colors whitespace-nowrap">
               <span class="brand-name-regular">NECTAR AND</span> <span class="brand-name-alt-light">HIVE</span>
             </span>
           </div>
         </a>
 
-        <!-- Navigation Links (3 Primary Pages) -->
-        <nav class="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-bold font-bahnschrift">
+        <!-- Navigation Links (3 Primary Pages - Desktop lg+) -->
+        <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm uppercase tracking-widest font-normal font-bahnschrift shrink-0">
           <button 
             onclick="navigateTo('home')" 
             id="nav-link-home" 
-            class="text-[#2D322F] hover:text-[#D1A22A] transition-colors py-2 relative whitespace-nowrap">
+            class="text-[#2D322F] hover:text-[#D1A22A] transition-colors py-2 relative whitespace-nowrap font-normal">
             Home
           </button>
           <button 
             onclick="navigateTo('shop')" 
             id="nav-link-shop" 
-            class="text-[#877C6B] hover:text-[#D1A22A] transition-colors py-2 relative whitespace-nowrap">
+            class="text-[#877C6B] hover:text-[#D1A22A] transition-colors py-2 relative whitespace-nowrap font-normal">
             Honey Collection
           </button>
           <button 
             onclick="navigateTo('tea')" 
             id="nav-link-tea" 
-            class="text-[#505649] hover:text-[#2D322F] transition-colors py-2 relative whitespace-nowrap">
+            class="text-[#505649] hover:text-[#2D322F] transition-colors py-2 relative whitespace-nowrap font-normal">
             Ketepa
           </button>
         </nav>
@@ -235,7 +235,7 @@
             <button 
               id="connect-dropdown-btn" 
               onclick="toggleConnectDropdown()"
-              class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 text-xs font-bold tracking-widest uppercase text-[#2D322F] bg-transparent hover:bg-[#2D322F] hover:text-[#F4F1EA] border border-[#2D322F] transition-colors">
+              class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 text-xs font-normal tracking-widest uppercase text-[#2D322F] bg-transparent hover:bg-[#2D322F] hover:text-[#F4F1EA] border border-[#2D322F] transition-colors">
               <span>Connect</span>
               <i class="ph ph-caret-down text-xs transition-transform duration-200" id="connect-caret"></i>
             </button>
@@ -246,10 +246,10 @@
               class="hidden absolute right-0 mt-2 w-80 sm:w-96 bg-white border border-[#BEB3A0] p-6 z-50 shadow-none">
               <div class="flex items-start justify-between pb-3 mb-4 border-b border-[#BEB3A0]">
                 <div>
-                  <h4 class="font-display text-base font-bold text-[#2D322F]">Artisanal Honey Producers</h4>
-                  <p class="text-xs text-[#877C6B] mt-0.5">Durban, KwaZulu-Natal</p>
+                  <h4 class="font-display text-base font-normal text-[#2D322F]">Artisanal Honey Producers</h4>
+                  <p class="text-xs text-[#877C6B] mt-0.5 font-light">Durban, KwaZulu-Natal</p>
                 </div>
-                <span class="text-xs font-bold uppercase tracking-wider text-[#505649] bg-[#F4F1EA] border border-[#505649]/30 px-2 py-0.5">
+                <span class="text-xs font-normal uppercase tracking-wider text-[#505649] bg-[#F4F1EA] border border-[#505649]/30 px-2 py-0.5">
                   Open
                 </span>
               </div>
@@ -299,21 +299,21 @@
           <button 
             onclick="toggleCartDrawer(true)"
             id="cart-trigger-btn"
-            class="flex items-center gap-1.5 sm:gap-2.5 px-3 py-2 sm:px-4 sm:py-2.5 bg-[#2D322F] text-[#F4F1EA] hover:bg-[#D1A22A] hover:text-[#2D322F] transition-colors text-xs font-bold uppercase tracking-widest whitespace-nowrap"
+            class="flex items-center gap-1.5 sm:gap-2.5 px-3 py-2 sm:px-4 sm:py-2.5 bg-[#2D322F] text-[#F4F1EA] hover:bg-[#D1A22A] hover:text-[#2D322F] transition-colors text-xs font-normal uppercase tracking-widest whitespace-nowrap"
             aria-label="View Shopping Cart">
             <i class="ph ph-handbag text-base text-[#D1A22A]"></i>
             <span>Bag</span>
             <span 
               id="header-cart-count" 
-              class="px-1.5 py-0.2 text-[11px] font-bold bg-[#D1A22A] text-[#2D322F] tabular-nums">
+              class="px-1.5 py-0.2 text-[11px] font-normal bg-[#D1A22A] text-[#2D322F] tabular-nums">
               0
             </span>
           </button>
 
-          <!-- Mobile Menu Trigger -->
+          <!-- Mobile & Tablet Menu Trigger -->
           <button 
             onclick="toggleMobileMenu()"
-            class="md:hidden p-1.5 sm:p-2 text-[#2D322F] hover:text-[#D1A22A] focus:outline-none"
+            class="lg:hidden p-1.5 sm:p-2 text-[#2D322F] hover:text-[#D1A22A] focus:outline-none"
             aria-label="Open Mobile Menu"
             id="mobile-menu-btn">
             <i class="ph ph-list text-2xl" id="mobile-menu-icon"></i>
@@ -322,23 +322,23 @@
 
       </div>
 
-      <!-- Mobile Nav Drawer (Sharp Squares) -->
-      <div id="mobile-nav" class="hidden md:hidden border-t border-[#BEB3A0] bg-[#F4F1EA] px-4 py-6 space-y-3 font-bahnschrift">
-        <button onclick="navigateTo('home'); toggleMobileMenu()" class="block w-full text-left py-2 text-xs font-bold uppercase tracking-widest text-[#2D322F] hover:text-[#D1A22A]">
+      <!-- Mobile & Tablet Nav Drawer (Sharp Squares) -->
+      <div id="mobile-nav" class="hidden lg:hidden border-t border-[#BEB3A0] bg-[#F4F1EA] px-4 py-6 space-y-3 font-bahnschrift">
+        <button onclick="navigateTo('home'); toggleMobileMenu()" class="block w-full text-left py-2 text-xs font-normal uppercase tracking-widest text-[#2D322F] hover:text-[#D1A22A]">
           Home
         </button>
-        <button onclick="navigateTo('shop'); toggleMobileMenu()" class="block w-full text-left py-2 text-xs font-bold uppercase tracking-widest text-[#877C6B] hover:text-[#D1A22A]">
+        <button onclick="navigateTo('shop'); toggleMobileMenu()" class="block w-full text-left py-2 text-xs font-normal uppercase tracking-widest text-[#877C6B] hover:text-[#D1A22A]">
           Honey Collection
         </button>
-        <button onclick="navigateTo('tea'); toggleMobileMenu()" class="block w-full text-left py-2 text-xs font-bold uppercase tracking-widest text-[#505649] hover:text-[#2D322F]">
+        <button onclick="navigateTo('tea'); toggleMobileMenu()" class="block w-full text-left py-2 text-xs font-normal uppercase tracking-widest text-[#505649] hover:text-[#2D322F]">
           Ketepa Tea
         </button>
-        <a href="#process" onclick="handleScrollTo('process'); toggleMobileMenu()" class="block w-full text-left py-2 text-xs font-bold uppercase tracking-widest text-[#877C6B] hover:text-[#D1A22A]">
+        <a href="#process" onclick="handleScrollTo('process'); toggleMobileMenu()" class="block w-full text-left py-2 text-xs font-normal uppercase tracking-widest text-[#877C6B] hover:text-[#D1A22A]">
           From Hive to Jar
         </a>
         <div class="pt-4 border-t border-[#BEB3A0] text-xs space-y-2 text-[#877C6B]">
-          <p>Durban, KZN, South Africa</p>
-          <a href="https://wa.me/27827736543" target="_blank" class="block font-bold text-emerald-800">+27 82 773 6543 (WhatsApp)</a>
+          <p class="font-light">Durban, KZN, South Africa</p>
+          <a href="https://wa.me/27827736543" target="_blank" class="block font-normal text-emerald-800">+27 82 773 6543 (WhatsApp)</a>
         </div>
       </div>
     </header>
@@ -355,12 +355,18 @@
         <div class="hero-brand-gradient border-b border-[#BEB3A0] py-20 sm:py-28 lg:py-36 relative overflow-hidden">
           <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center relative z-10">
             
-            <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold text-[#2D322F] tracking-tight leading-[1.1] mb-6 text-balance drop-shadow-sm">
+            <p class="font-bahnschrift text-sm sm:text-base font-normal tracking-[0.25em] uppercase text-[#2D322F] mb-6 flex items-center justify-center gap-2.5">
+              <span class="w-2 h-2 bg-[#D1A22A]"></span>
+              <span>Artisanal Raw Honey · Durban</span>
+              <span class="w-2 h-2 bg-[#D1A22A]"></span>
+            </p>
+
+            <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-light text-[#2D322F] tracking-tight leading-[1.1] mb-6 text-balance drop-shadow-sm">
               Crafted by Nature.<br />
-              <span class="font-light text-[#2D322F]/90">Perfected by Bees.</span>
+              <span class="font-normal text-[#2D322F]/90">Perfected by Bees.</span>
             </h1>
 
-            <p class="text-base sm:text-lg lg:text-xl text-[#2D322F]/90 max-w-2xl leading-relaxed font-normal mb-10 text-balance font-bahnschrift">
+            <p class="text-base sm:text-lg lg:text-xl text-[#2D322F]/90 max-w-2xl leading-relaxed font-light mb-10 text-balance font-bahnschrift">
               Pure, single-origin South African honey cold-extracted with reverence in KZN. Raw, unheated, and bottled with undisturbed natural enzymes and live coastal pollens.
             </p>
 
@@ -368,13 +374,13 @@
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto font-bahnschrift">
               <button 
                 onclick="navigateTo('shop')" 
-                class="w-full sm:w-auto px-8 sm:px-12 py-4 bg-[#2D322F] hover:bg-[#D1A22A] text-[#F4F1EA] hover:text-[#2D322F] font-bold text-sm uppercase tracking-[0.2em] transition-colors flex items-center justify-center gap-3 shadow-sm">
+                class="w-full sm:w-auto px-8 sm:px-12 py-4 bg-[#2D322F] hover:bg-[#D1A22A] text-[#F4F1EA] hover:text-[#2D322F] font-normal text-sm uppercase tracking-[0.2em] transition-colors flex items-center justify-center gap-3 shadow-sm">
                 <span>Explore Honey Collection</span>
                 <i class="ph ph-arrow-right text-base"></i>
               </button>
               <button 
                 onclick="navigateTo('tea')" 
-                class="w-full sm:w-auto px-8 sm:px-12 py-4 border-2 border-[#2D322F] bg-white/60 backdrop-blur-sm hover:bg-[#2D322F] text-[#2D322F] hover:text-[#F4F1EA] font-bold text-sm uppercase tracking-[0.2em] transition-colors flex items-center justify-center gap-2">
+                class="w-full sm:w-auto px-8 sm:px-12 py-4 border-2 border-[#2D322F] bg-white/60 backdrop-blur-sm hover:bg-[#2D322F] text-[#2D322F] hover:text-[#F4F1EA] font-normal text-sm uppercase tracking-[0.2em] transition-colors flex items-center justify-center gap-2">
                 <span>Discover Ketepa Tea</span>
               </button>
             </div>
@@ -393,7 +399,11 @@
             
             <!-- Slideshow Header with Clean Sharp Controls -->
             <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-2 border-b border-[#BEB3A0]">
-              <div> 
+              <div>
+                <p class="text-xs font-bold uppercase tracking-[0.25em] text-[#D1A22A] font-bahnschrift flex items-center gap-2 mb-2">
+                  <span class="w-1.5 h-1.5 bg-[#D1A22A]"></span>
+                  <span>Signature Reserves &amp; Curated Selections</span>
+                </p>
                 <h2 class="font-display text-3xl sm:text-4xl font-bold text-[#2D322F] tracking-tight">
                   Featured Products
                 </h2>
@@ -566,7 +576,7 @@
                       <!-- Price -->
                       <div class="pt-3 border-t border-[#BEB3A0]/70 flex items-baseline gap-3">
                         <span class="font-display text-2xl sm:text-3xl font-bold text-[#2D322F] tabular-nums">
-                          R 180
+                          R 95
                         </span>
                         <span class="text-xs text-[#2D322F]/60 font-bahnschrift">
                           ZAR (250g Hexagonal Pack)
@@ -623,7 +633,8 @@
         <section id="process" class="py-16 sm:py-24 bg-white border-b border-[#BEB3A0]">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="max-w-2xl mx-auto text-center mb-16 space-y-3"> 
+            <div class="max-w-2xl mx-auto text-center mb-16 space-y-3">
+              <span class="text-sm font-bold tracking-[0.25em] uppercase text-[#D1A22A] font-bahnschrift">Artisanal Ethos</span>
               <h2 class="font-display text-3xl sm:text-4xl font-bold text-[#2D322F] tracking-tight">
                 From Hive to Jar
               </h2>
@@ -696,7 +707,7 @@
       <!-- VIEW 2: SHOP COLLECTION VIEW                                              -->
       <!-- ========================================================================= -->
       <section id="view-shop" class="hidden view-fade py-12 sm:py-16 bg-[#F4F1EA]/40 min-h-screen">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8">
           
           <!-- Collection Header (Minimal, Sharp) -->
           <div class="border-b border-[#BEB3A0] pb-8 mb-10">
@@ -769,8 +780,8 @@
             </div>
           </div>
 
-          <!-- Products Grid -->
-          <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Products Grid (3 Horizontal Grid, Even On Mobile) -->
+          <div id="products-grid" class="grid grid-cols-3 gap-2 sm:gap-6 lg:gap-8">
             <!-- Rendered dynamically by JavaScript -->
           </div>
 
@@ -781,7 +792,7 @@
       <!-- VIEW: TEA COLLECTION VIEW (LAYOUT MATCHING HONEY COLLECTION GRID)          -->
       <!-- ========================================================================= -->
       <section id="view-tea" class="hidden view-fade py-12 sm:py-16 bg-[#F4F1EA]/40 min-h-screen">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8">
           
           <!-- Collection Header (Minimal, Sharp) -->
           <div class="border-b border-[#BEB3A0] pb-8 mb-10">
@@ -848,8 +859,8 @@
             </div>
           </div>
 
-          <!-- Products Grid -->
-          <div id="tea-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Products Grid (3 Horizontal Grid, Even On Mobile) -->
+          <div id="tea-products-grid" class="grid grid-cols-3 gap-2 sm:gap-6 lg:gap-8">
             <!-- Rendered dynamically by JavaScript -->
           </div>
 
