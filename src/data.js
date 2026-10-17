@@ -152,10 +152,10 @@ export const products = [
     subtitle: "Finest Kenyan Pure Black Tea · Signature Gift Pack",
     category: "tea",
     origin: "Kericho, Great Rift Valley, Kenya",
-    price: 95,
+    price: 180,
     weight: "250g Hexagonal Pack",
     sizes: [
-      { size: "250g", weight: "250g Hexagonal Gift Pack", price: 95, salePrice: 95, onSale: false, inStock: true }
+      { size: "250g", weight: "250g Hexagonal Gift Pack", price: 180, salePrice: 150, onSale: false, inStock: true }
     ],
     inStock: true,
     image: "images/KETEPA PRIDE HEXAGONAL PACK.jpg",
