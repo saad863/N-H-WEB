@@ -176,16 +176,42 @@
     </script>
 
     <style>
-      /* Font Face Declarations for Local Galano Grotesque & Bahnschrift */
+      /* Font Face Declarations for Local Galano & Gelano Grotesque & Bahnschrift */
+      @font-face {
+        font-family: 'Gelano Grotesque Regular';
+        src: local('Gelano Grotesque Regular'), local('Gelano Grotesque-Regular'), local('Galano Grotesque Regular'), local('Galano Grotesque-Regular'), local('Gelano Grotesque'), local('Galano Grotesque');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
       @font-face {
         font-family: 'Galano Grotesque';
-        src: local('Galano Grotesque Bold'), local('Galano Grotesque-Bold'), local('Galano Grotesque'), local('GalanoGrotesque');
+        src: local('Gelano Grotesque Regular'), local('Galano Grotesque Regular'), local('Gelano Grotesque-Regular'), local('Galano Grotesque-Regular'), local('Gelano Grotesque'), local('Galano Grotesque'), local('GalanoGrotesque-Regular'), local('GalanoGrotesque');
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Galano Grotesque';
+        src: local('Gelano Grotesque Bold'), local('Galano Grotesque Bold'), local('Gelano Grotesque-Bold'), local('Galano Grotesque-Bold'), local('GalanoGrotesque-Bold');
         font-weight: 600 800;
         font-display: swap;
       }
       @font-face {
+        font-family: 'Gelano Grotesque Alt Light';
+        src: local('Gelano Grotesque Alt Light'), local('Gelano Grotesque Alt-Light'), local('Gelano Grotesque AltLight'), local('GelanoGrotesqueAlt-Light'), local('Galano Grotesque Alt Light'), local('Galano Grotesque Alt-Light'), local('Galano Grotesque AltLight'), local('GalanoGrotesqueAlt-Light'), local('Gelano Grotesque Alt'), local('Galano Grotesque Alt'), local('Gelano Grotesque Light'), local('Galano Grotesque Light');
+        font-weight: 200 300;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Galano Grotesque Alt Light';
+        src: local('Gelano Grotesque Alt Light'), local('Galano Grotesque Alt Light'), local('Gelano Grotesque Alt-Light'), local('Galano Grotesque Alt-Light'), local('GelanoGrotesqueAlt-Light'), local('GalanoGrotesqueAlt-Light'), local('Gelano Grotesque Alt'), local('Galano Grotesque Alt'), local('Galano Grotesque Light'), local('Gelano Grotesque Light');
+        font-weight: 200 300;
+        font-display: swap;
+      }
+      @font-face {
         font-family: 'Galano Grotesque Light';
-        src: local('Galano Grotesque Light'), local('Galano Grotesque-Light'), local('GalanoGrotesque-Light');
+        src: local('Gelano Grotesque Light'), local('Galano Grotesque Light'), local('Gelano Grotesque-Light'), local('Galano Grotesque-Light'), local('GalanoGrotesque-Light');
         font-weight: 200 300;
         font-display: swap;
       }
@@ -252,6 +278,16 @@
       .font-grotesque-light {
         font-family: 'Galano Grotesque Light', 'Outfit', 'Bahnschrift', sans-serif;
         font-weight: 300;
+      }
+      .brand-name-regular {
+        font-family: 'Gelano Grotesque Regular', 'Galano Grotesque', 'Gelano Grotesque', 'Outfit', 'Barlow', -apple-system, sans-serif;
+        font-weight: 400 !important;
+        letter-spacing: -0.015em;
+      }
+      .brand-name-alt-light {
+        font-family: 'Gelano Grotesque Alt Light', 'Galano Grotesque Alt Light', 'Galano Grotesque Alt', 'Gelano Grotesque Alt', 'Galano Grotesque Light', 'Outfit', -apple-system, sans-serif;
+        font-weight: 300 !important;
+        letter-spacing: -0.015em;
       }
       .font-bahnschrift-spec {
         font-family: 'Bahnschrift', 'Barlow', 'DIN Alternate', sans-serif;
@@ -530,11 +566,11 @@
 
     <!-- Sticky Main Navigation Header (Alabaster, Sand Borders, Charcoal Text) -->
     <header id="site-header" class="sticky top-0 z-40 bg-[#F4F1EA] border-b border-[#BEB3A0]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 sm:gap-6">
         
         <!-- Brand Wordmark & Logo (Sharp Square) -->
-        <a href="#home" onclick="navigateTo('home'); return false;" class="flex items-center gap-3.5 group">
-          <div class="brand-logo-circle w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+        <a href="#home" onclick="navigateTo('home'); return false;" class="flex items-center gap-2 sm:gap-3.5 group min-w-0">
+          <div class="brand-logo-circle w-11 h-11 sm:w-16 sm:h-16 rounded-full overflow-hidden flex items-center justify-center shrink-0">
             <img 
               src="images/logo.svg" 
               alt="NECTAR AND HIVE" 
@@ -543,9 +579,9 @@
               onerror="this.onerror=null; this.src='images/Untitled-3.png';"
             />
           </div>
-          <div class="flex flex-col">
-            <span class="font-display text-xl sm:text-2xl font-bold tracking-tight text-[#2D322F] group-hover:text-[#D1A22A] transition-colors">
-              NECTAR AND HIVE
+          <div class="flex flex-col min-w-0">
+            <span class="text-base sm:text-2xl tracking-tight text-[#2D322F] group-hover:text-[#D1A22A] transition-colors whitespace-nowrap">
+              <span class="brand-name-regular">NECTAR AND</span> <span class="brand-name-alt-light">HIVE</span>
             </span>
           </div>
         </a>
@@ -567,14 +603,13 @@
           <button 
             onclick="navigateTo('tea')" 
             id="nav-link-tea" 
-            class="text-[#505649] hover:text-[#2D322F] transition-colors py-2 relative whitespace-nowrap inline-flex items-center gap-1.5">
-            <span class="w-1.5 h-1.5 bg-[#505649]"></span>
-            <span>Ketepa</span>
+            class="text-[#505649] hover:text-[#2D322F] transition-colors py-2 relative whitespace-nowrap">
+            Ketepa
           </button>
         </nav>
 
         <!-- Actions: Connect & Bag (Sharp Squares) -->
-        <div class="flex items-center gap-3 shrink-0 font-bahnschrift">
+        <div class="flex items-center gap-1.5 sm:gap-3 shrink-0 font-bahnschrift">
           
           <!-- Connect Dropdown -->
           <div class="relative" id="connect-dropdown-container">
@@ -645,7 +680,7 @@
           <button 
             onclick="toggleCartDrawer(true)"
             id="cart-trigger-btn"
-            class="flex items-center gap-2.5 px-4 py-2.5 bg-[#2D322F] text-[#F4F1EA] hover:bg-[#D1A22A] hover:text-[#2D322F] transition-colors text-xs font-bold uppercase tracking-widest"
+            class="flex items-center gap-1.5 sm:gap-2.5 px-3 py-2 sm:px-4 sm:py-2.5 bg-[#2D322F] text-[#F4F1EA] hover:bg-[#D1A22A] hover:text-[#2D322F] transition-colors text-xs font-bold uppercase tracking-widest whitespace-nowrap"
             aria-label="View Shopping Cart">
             <i class="ph ph-handbag text-base text-[#D1A22A]"></i>
             <span>Bag</span>
@@ -659,7 +694,7 @@
           <!-- Mobile Menu Trigger -->
           <button 
             onclick="toggleMobileMenu()"
-            class="md:hidden p-2 text-[#2D322F] hover:text-[#D1A22A] focus:outline-none"
+            class="md:hidden p-1.5 sm:p-2 text-[#2D322F] hover:text-[#D1A22A] focus:outline-none"
             aria-label="Open Mobile Menu"
             id="mobile-menu-btn">
             <i class="ph ph-list text-2xl" id="mobile-menu-icon"></i>
@@ -1823,8 +1858,8 @@
           
           <!-- Column 1: Brand Wordmark & Location -->
           <div class="md:col-span-4 space-y-4">
-            <div class="flex items-center gap-3">
-              <div class="brand-logo-circle w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+            <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+              <div class="brand-logo-circle w-11 h-11 sm:w-16 sm:h-16 rounded-full overflow-hidden flex items-center justify-center shrink-0">
                 <img 
                   src="images/logo.svg" 
                   alt="NECTAR AND HIVE Logo" 
@@ -1833,7 +1868,9 @@
                   onerror="this.onerror=null; this.src='images/Untitled-3.png';"
                 />
               </div>
-              <span class="font-display text-2xl font-bold tracking-tight text-[#F4F1EA]">NECTAR AND HIVE</span>
+              <span class="text-xl sm:text-2xl tracking-tight text-[#F4F1EA] whitespace-nowrap">
+                <span class="brand-name-regular">NECTAR AND</span> <span class="brand-name-alt-light text-[#F4F1EA]/90">HIVE</span>
+              </span>
             </div>
             <p class="text-xs text-[#F4F1EA]/80 leading-relaxed max-w-sm">
               Artisanal single-origin honey, sustainably harvested in KwaZulu-Natal. Dedicated to raw purity, wild forage conservation, and chemical-free beekeeping.
