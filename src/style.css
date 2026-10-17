@@ -1,0 +1,377 @@
+/* Font Face Declarations for Local Galano & Gelano Grotesque & Bahnschrift */
+@font-face {
+  font-family: 'Gelano Grotesque Regular';
+  src: local('Gelano Grotesque Regular'), local('Gelano Grotesque-Regular'), local('Galano Grotesque Regular'), local('Galano Grotesque-Regular'), local('Gelano Grotesque'), local('Galano Grotesque');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Galano Grotesque';
+  src: local('Gelano Grotesque Regular'), local('Galano Grotesque Regular'), local('Gelano Grotesque-Regular'), local('Galano Grotesque-Regular'), local('Gelano Grotesque'), local('Galano Grotesque'), local('GalanoGrotesque-Regular'), local('GalanoGrotesque');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Galano Grotesque';
+  src: local('Gelano Grotesque Bold'), local('Galano Grotesque Bold'), local('Gelano Grotesque-Bold'), local('Galano Grotesque-Bold'), local('GalanoGrotesque-Bold');
+  font-weight: 600 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gelano Grotesque Alt Light';
+  src: local('Gelano Grotesque Alt Light'), local('Gelano Grotesque Alt-Light'), local('Gelano Grotesque AltLight'), local('GelanoGrotesqueAlt-Light'), local('Galano Grotesque Alt Light'), local('Galano Grotesque Alt-Light'), local('Galano Grotesque AltLight'), local('GalanoGrotesqueAlt-Light'), local('Gelano Grotesque Alt'), local('Galano Grotesque Alt'), local('Gelano Grotesque Light'), local('Galano Grotesque Light');
+  font-weight: 200 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Galano Grotesque Alt Light';
+  src: local('Gelano Grotesque Alt Light'), local('Galano Grotesque Alt Light'), local('Gelano Grotesque Alt-Light'), local('Galano Grotesque Alt-Light'), local('GelanoGrotesqueAlt-Light'), local('GalanoGrotesqueAlt-Light'), local('Gelano Grotesque Alt'), local('Galano Grotesque Alt'), local('Galano Grotesque Light'), local('Galano Grotesque Light');
+  font-weight: 200 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Galano Grotesque Light';
+  src: local('Gelano Grotesque Light'), local('Galano Grotesque Light'), local('Gelano Grotesque-Light'), local('Galano Grotesque-Light'), local('GalanoGrotesque-Light');
+  font-weight: 200 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bahnschrift';
+  src: local('Bahnschrift'), local('Bahnschrift Regular'), local('Bahnschrift-Regular');
+  font-display: swap;
+}
+
+/* Sharp Squares Brand Constitution: Zero border-radius across all components */
+/* Sharp Squares Brand Constitution: Zero border-radius for cards, buttons & panels */
+*, *::before, *::after {
+  border-radius: 0px !important;
+}
+/* Logo Circle Exception: Explicitly preserve circular brand logos without borders or rings */
+.brand-logo-circle,
+.brand-logo-circle *,
+.brand-circle-logo {
+  border-radius: 9999px !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Brand Identity Board Warm Organic Gradient (Alabaster, Sand, Ochre Gold) */
+.hero-brand-gradient {
+  background: 
+    radial-gradient(ellipse at 88% 20%, rgba(209, 162, 42, 0.25) 0%, transparent 55%),
+    radial-gradient(ellipse at 12% 80%, rgba(190, 179, 160, 0.35) 0%, transparent 60%),
+    linear-gradient(135deg, #F4F1EA 0%, #EFE8DB 32%, #E5DAC3 62%, #DEC797 86%, #D1A22A 100%);
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F1EA;
+}
+::-webkit-scrollbar-thumb {
+  background: #2D322F;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D1A22A;
+}
+
+/* Base Typography & Mobile Optimization */
+html, body {
+  font-family: 'Galano Grotesque', 'Bahnschrift', 'Outfit', 'Barlow', -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  -webkit-overflow-scrolling: touch;
+}
+button, a, input, select {
+  touch-action: manipulation;
+}
+h1, h2, h3, h4, .brand-title {
+  font-family: 'Galano Grotesque', 'Bahnschrift', 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+.font-grotesque-light {
+  font-family: 'Galano Grotesque Light', 'Outfit', 'Bahnschrift', sans-serif;
+  font-weight: 300;
+}
+.brand-name-regular {
+  font-family: 'Gelano Grotesque Regular', 'Galano Grotesque', 'Gelano Grotesque', 'Outfit', 'Barlow', -apple-system, sans-serif;
+  font-weight: 400 !important;
+  letter-spacing: -0.015em;
+}
+.brand-name-alt-light {
+  font-family: 'Gelano Grotesque Alt Light', 'Galano Grotesque Alt Light', 'Galano Grotesque Alt', 'Gelano Grotesque Alt', 'Galano Grotesque Light', 'Outfit', -apple-system, sans-serif;
+  font-weight: 300 !important;
+  letter-spacing: -0.015em;
+}
+.font-bahnschrift-spec {
+  font-family: 'Bahnschrift', 'Barlow', 'DIN Alternate', sans-serif;
+}
+
+/* Organic Honeycomb & Grid Motif */
+.bg-honeycomb-pattern {
+  background-color: #FAFAFA;
+  background-image: 
+    radial-gradient(#D2A22A 0.75px, transparent 0.75px),
+    radial-gradient(#48392A 0.5px, #FAFAFA 0.5px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+  background-opacity: 0.03;
+}
+
+.bg-grid-subtle {
+  background-image: linear-gradient(to right, rgba(72, 57, 42, 0.04) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(72, 57, 42, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* View Animations */
+.view-fade {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F1EA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1A22A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B08218;
+}
+
+/* ========================================================================= */
+/* ACCESSIBILITY: SKIP TO CONTENT                                            */
+/* ========================================================================= */
+.skip-to-content-link {
+  position: fixed;
+  top: -120px;
+  left: 1rem;
+  background: #2D322F;
+  color: #F4F1EA;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  z-index: 99999;
+  border-radius: 0.375rem;
+  border: 2px solid #D1A22A;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  transition: top 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+.skip-to-content-link:focus {
+  top: 1rem;
+  outline: none;
+}
+
+/* ========================================================================= */
+/* READING / SCROLL PROGRESS BAR                                             */
+/* ========================================================================= */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, #D1A22A, #BEB3A0, #D1A22A);
+  width: 0%;
+  z-index: 100;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 12px rgba(209, 162, 42, 0.6);
+}
+
+/* ========================================================================= */
+/* HERO LUMINOUS GRADIENT ORBS                                               */
+/* ========================================================================= */
+.hero-gradient-canvas {
+  background-color: #2D322F;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Luminous light orbs */
+.light-orb {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  will-change: transform, opacity;
+}
+
+/* Orb 1: Upper Golden Ochre (#D1A22A) glow */
+.orb-ochre-top {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(209, 162, 42, 0.95) 0%, rgba(209, 162, 42, 0.7) 40%, rgba(209, 162, 42, 0.15) 65%, transparent 80%);
+  filter: blur(85px);
+  top: -80px;
+  right: 12%;
+  opacity: 0.9;
+  animation: floatOrbTop 16s ease-in-out infinite alternate;
+}
+
+/* Orb 2: Right Middle Sustainable Linen & Cotton (#F4F1EA / #BEB3A0) glow */
+.orb-linen-mid {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(250, 243, 225, 0.9) 0%, rgba(245, 231, 198, 0.65) 45%, rgba(209, 162, 42, 0.2) 70%, transparent 80%);
+  filter: blur(95px);
+  top: 20%;
+  right: 2%;
+  opacity: 0.85;
+  animation: floatOrbMid 19s ease-in-out infinite alternate;
+}
+
+/* Orb 3: Lower Golden Ochre (#D1A22A) warm depth */
+.orb-ochre-bot {
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(209, 162, 42, 0.9) 0%, rgba(224, 181, 72, 0.65) 45%, rgba(209, 162, 42, 0.15) 70%, transparent 80%);
+  filter: blur(100px);
+  bottom: -100px;
+  right: 18%;
+  opacity: 0.85;
+  animation: floatOrbBot 22s ease-in-out infinite alternate;
+}
+
+/* Orb 4: Subtle ambient warm glow on the left for balance */
+.orb-ambient-left {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(245, 231, 198, 0.35) 0%, rgba(209, 162, 42, 0.2) 50%, transparent 75%);
+  filter: blur(90px);
+  top: 30%;
+  left: -60px;
+  opacity: 0.5;
+  animation: floatOrbLeft 20s ease-in-out infinite alternate;
+}
+
+@media (min-width: 1024px) {
+  .orb-ochre-top {
+    width: 580px;
+    height: 580px;
+    filter: blur(105px);
+  }
+  .orb-linen-mid {
+    width: 500px;
+    height: 500px;
+    filter: blur(110px);
+  }
+  .orb-ochre-bot {
+    width: 620px;
+    height: 620px;
+    filter: blur(120px);
+  }
+}
+
+@keyframes floatOrbTop {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(35px, 25px) scale(1.08); }
+  100% { transform: translate(-25px, 45px) scale(0.96); }
+}
+
+@keyframes floatOrbMid {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-45px, -30px) scale(1.12); }
+  100% { transform: translate(30px, 25px) scale(0.94); }
+}
+
+@keyframes floatOrbBot {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -35px) scale(1.06); }
+  100% { transform: translate(-35px, -20px) scale(1.12); }
+}
+
+@keyframes floatOrbLeft {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(30px, 40px) scale(1.1); }
+}
+
+/* ========================================================================= */
+/* FORM VALIDATION ERROR & LOADING STATES                                    */
+/* ========================================================================= */
+.input-error {
+  border-color: #ef4444 !important;
+  background-color: #fef2f2 !important;
+}
+.input-error:focus {
+  outline-color: #ef4444 !important;
+  box-shadow: 0 0 0 1px #ef4444 !important;
+}
+.error-hint {
+  color: #dc2626;
+  font-size: 0.72rem;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  animation: fadeIn 0.2s ease-in-out forwards;
+}
+.btn-spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ========================================================================= */
+/* PRINT STYLESHEET                                                          */
+/* ========================================================================= */
+@media print {
+  header, footer, #toast-container, #cookie-consent-popup, 
+  #sticky-mobile-cta, #back-to-top-btn, #scroll-progress-bar,
+  #cart-drawer, #cart-drawer-overlay, #quick-product-modal,
+  #confirm-remove-modal, #checkout-modal, .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #2D322F !important;
+    font-size: 11pt;
+  }
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .shadow-luxury, .shadow-drawer, .shadow-sm {
+    box-shadow: none !important;
+  }
+  a {
+    text-decoration: underline !important;
+    color: #000 !important;
+  }
+}
+.print-only {
+  display: none;
+}

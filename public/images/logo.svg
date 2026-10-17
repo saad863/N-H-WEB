@@ -1,22 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
   <defs>
-    <style>
-      .cls-1 {
-        fill: #fafbfc;
-      }
-
-      .cls-2 {
-        fill: #d1a22a;
-      }
-    </style>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
   </defs>
-  <circle cx="80" cy="80" r="80"/>
-  <path class="cls-1" d="M81.43,136.45l-.07,6.1c-.01.98-.96,1.51-1.78,1.46-.95-.05-1.66-.74-1.66-1.77v-5.78c-7.9-.62-14.57-5.44-18.1-12.43l1.95-1.15c2.36,4.94,6.46,8.58,11.59,10.37,9.57,3.34,19.81-1.31,24.24-10.35l1.97,1.12c-3.46,6.82-10.21,11.9-18.13,12.42Z"/>
-  <circle class="cls-1" cx="80.23" cy="51.21" r="12.06"/>
-  <path class="cls-2" d="M75.31,40.21c-.43.19-.85.41-1.25.65-.33-.25-.31-.51-.42-.81-1.42-4-3.35-7.76-6.12-10.96-2.91-3.37-6.65-5.47-11.01-6.27-1.02-.19-1.97-.49-2.74-1.14-1.16-.99-1.52-2.49-.88-3.89.58-1.27,2.06-1.99,3.6-1.69s2.94,1.19,4.27,2.18c2.97,2.2,5.36,4.89,7.54,7.9,2.74,3.78,4.8,7.86,6.48,12.2.23.6.48,1.11.53,1.82Z"/>
-  <path class="cls-2" d="M86.72,41.05c-.5-.32-1.02-.6-1.56-.84,2.77-8.06,8.57-17.68,15.59-22.48,2.23-1.52,5-2.66,6.72-.71.67.76.91,1.87.57,2.96-.94,2.98-4.35,2.33-7.89,3.82-3.18,1.34-5.81,3.49-7.9,6.26-2.34,3.08-4.05,6.47-5.38,10.09-.12.32-.14.6-.14.9Z"/>
-  <path class="cls-2" d="M114.67,85.41c-6.6-6.27-15.29-11.14-24.19-13.09-2.35-.51-4.52-.84-6.93-.56-3.08.35-5.84,2.75-5.85,6.1l-.09,36.98-1.79-.02-18.4-26.16-.09,20.36c-.65,1.01-1.43,1.84-2.56,2.47v-26.46s2.31-1.57,2.31-1.57l9.45,13.33,8.6,12.23.09-31.14c0-2.95,1.68-5.59,4.09-7.04,2.05-1.24,4.32-1.56,6.7-1.4,3.15.21,6.11.88,9.14,1.87,7.32,2.4,14.04,6.25,19.79,11.37,7.62,6.78,15.46,18.08,9.5,27.9-3.54,5.83-10.25,8.98-17.02,8.11-3.01-.39-5.58-1.71-7.78-3.83l1.32-1.89c2.18,2.35,4.95,3.56,8.08,3.68,5.57.21,10.84-2.71,13.63-7.52,4.75-8.18-1.83-17.85-8.01-23.72Z"/>
-  <path class="cls-2" d="M105.65,111.46c-1.16-.51-2.01-1.44-2.62-2.52l.04-10.45h-17.01s-.03,16.34-.03,16.34l-2.75.02v-36.48s2.77.02,2.77.02v17.64s16.99-.01,16.99-.01v-12.65s2.61,1.67,2.61,1.67v26.44Z"/>
-  <path class="cls-2" d="M38.01,110.34c4.73,6.79,15.07,9.02,21.16,2.67l1.24,1.86c-2.76,2.68-6.21,4.03-10.08,4.04-6.02.02-11.67-3.06-14.79-8.2-3.98-6.58-1.73-13.77,2.37-19.82,2.82-4.16,6.31-7.61,10.31-10.66,7.44-5.66,16.78-10.03,26.22-10.75-.7.8-1.31,1.44-1.76,2.34-4.75.65-9.22,2.07-13.54,4.18-7.66,3.74-15.27,9.54-19.87,16.76-3.52,5.52-5.2,11.92-1.27,17.57Z"/>
+  <!-- Background Badge -->
+  <rect width="300" height="300" rx="60" fill="#1C1814" />
+  
+  <!-- Antennae (Gold) -->
+  <path d="M 142 82 C 134 56, 122 36, 104 32 C 100 31, 98 35, 102 38 C 114 46, 124 64, 134 82" 
+        fill="#D2A22A" />
+  <path d="M 158 82 C 166 56, 178 36, 196 32 C 200 31, 202 35, 198 38 C 186 46, 176 64, 166 82" 
+        fill="#D2A22A" />
+        
+  <!-- Head (White Circle) -->
+  <circle cx="150" cy="98" r="23" fill="#FFFFFF" />
+
+  <!-- Thorax / Wings Contour (Gold) -->
+  <!-- Left wing loop & Top arch -->
+  <path d="M 139 135 C 105 135, 62 152, 62 188 C 62 216, 92 225, 112 218" 
+        fill="none" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+        
+  <!-- Right wing loop & Top arch -->
+  <path d="M 161 135 C 195 135, 238 152, 238 188 C 238 216, 208 225, 188 218" 
+        fill="none" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Top bridge curve swooping into center monogram -->
+  <path d="M 125 140 C 135 133, 145 132, 150 134 C 155 136, 160 142, 160 152" 
+        fill="none" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" />
+
+  <!-- Monogram: 'N' and 'H' interwoven -->
+  <!-- 'N' Left Stem -->
+  <line x1="104" y1="158" x2="104" y2="216" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" />
+  
+  <!-- 'N' Diagonal connecting down to center stem -->
+  <path d="M 104 158 L 148 216" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Center shared stem (N right stem / H left stem with top hook) -->
+  <path d="M 148 135 C 148 140, 148 150, 148 216" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" />
+  
+  <!-- 'H' Crossbar -->
+  <line x1="148" y1="184" x2="196" y2="184" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" />
+  
+  <!-- 'H' Right Stem -->
+  <line x1="196" y1="152" x2="196" y2="216" stroke="#D2A22A" stroke-width="7" stroke-linecap="round" />
+
+  <!-- Bottom Abdomen Arc & Stinger (White) -->
+  <path d="M 112 232 C 122 250, 136 256, 150 256 C 164 256, 178 250, 188 232" 
+        fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
+  <line x1="150" y1="256" x2="150" y2="272" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" />
 </svg>

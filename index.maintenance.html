@@ -1,0 +1,461 @@
+<!doctype html>
+<!-- ========================================================================= -->
+<!-- 🐝 NECTAR AND HIVE — STANDALONE MAINTENANCE MODE FILE                    -->
+<!-- ========================================================================= -->
+<!-- HOW TO TURN MAINTENANCE MODE ON & OFF:                                    -->
+<!--                                                                           -->
+<!-- TO TURN MAINTENANCE MODE ON:                                              -->
+<!-- 1. Rename your live 'index.html' to 'index.store.html'                    -->
+<!-- 2. Copy/rename this file 'index.maintenance.html' to 'index.html'         -->
+<!-- Now every visitor to your website will see this maintenance screen!       -->
+<!--                                                                           -->
+<!-- TO TURN MAINTENANCE MODE OFF (REOPEN STORE):                              -->
+<!-- 1. Rename 'index.html' back to 'index.maintenance.html'                   -->
+<!-- 2. Rename 'index.store.html' back to 'index.html'                         -->
+<!-- Your live store is instantly reopened to the public!                      -->
+<!-- ========================================================================= -->
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    
+    <title>Under Maintenance · Tending to the Hives | NECTAR AND HIVE Durban</title>
+    <meta name="description" content="NECTAR AND HIVE is currently undergoing brief maintenance while we update our seasonal artisanal honey and tea catalog. We will be back online shortly. For direct orders, WhatsApp +27 82 773 6543." />
+    <meta property="og:title" content="Under Maintenance | NECTAR AND HIVE Durban" />
+    <meta property="og:description" content="NECTAR AND HIVE is currently undergoing brief maintenance while we update our seasonal artisanal honey and tea catalog. WhatsApp +27 82 773 6543 for direct orders." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Browser Tab Icon / Favicons -->
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+    <link rel="shortcut icon" href="images/logo.svg" />
+
+    <!-- Typography: Galano Grotesque / Bahnschrift & geometric grotesque alternates -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons via CDN -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Brand Identity Colors from Guide:
+              alabaster: {
+                DEFAULT: '#F4F1EA',
+                50: '#FAF8F5',
+                100: '#F4F1EA',
+                200: '#EAE5DB',
+                300: '#DFD8C9',
+              },
+              sand: {
+                DEFAULT: '#BEB3A0',
+                light: '#D4CCC0',
+                dark: '#A69B87',
+              },
+              sage: {
+                DEFAULT: '#505649',
+                light: '#68705F',
+                dark: '#3D4238',
+              },
+              ochre: {
+                DEFAULT: '#D1A22A',
+                light: '#E0B548',
+                dark: '#B08218',
+              },
+              taupe: {
+                DEFAULT: '#877C6B',
+                light: '#9E927F',
+                dark: '#6F6556',
+              },
+              charcoal: {
+                DEFAULT: '#2D322F',
+                light: '#424A45',
+                dark: '#1C201E',
+              },
+              // Compatibility mappings:
+              linen: {
+                DEFAULT: '#F4F1EA',
+                50: '#FAF8F5',
+                100: '#F4F1EA',
+                200: '#BEB3A0',
+                dark: '#877C6B',
+              },
+              cotton: {
+                DEFAULT: '#BEB3A0',
+                50: '#F4F1EA',
+                100: '#BEB3A0',
+              },
+              gold: {
+                DEFAULT: '#D1A22A',
+                light: '#E0B548',
+                dark: '#B08218',
+              },
+              amber: {
+                DEFAULT: '#2D322F',
+                light: '#424A45',
+                dark: '#1C201E',
+                deep: '#2D322F',
+              },
+              neutral: {
+                base: '#F4F1EA',
+                warm: '#BEB3A0',
+                paper: '#FFFFFF',
+                border: '#BEB3A0',
+              }
+            },
+            fontFamily: {
+              sans: ['"Galano Grotesque"', 'Bahnschrift', '"Outfit"', '"Barlow"', 'system-ui', '-apple-system', 'sans-serif'],
+              display: ['"Galano Grotesque"', 'Bahnschrift', '"Outfit"', 'system-ui', 'sans-serif'],
+              light: ['"Galano Grotesque Light"', '"Outfit"', 'Bahnschrift', 'system-ui', 'sans-serif'],
+              bahnschrift: ['Bahnschrift', '"Barlow"', '"DIN Alternate"', '"Outfit"', 'sans-serif'],
+              serif: ['"Galano Grotesque"', 'Bahnschrift', '"Outfit"', 'system-ui', 'sans-serif'],
+            },
+            boxShadow: {
+              'luxury': '0 10px 30px -10px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04)',
+              'luxury-hover': '0 20px 40px -15px rgba(209, 162, 42, 0.28), 0 8px 12px -3px rgba(0, 0, 0, 0.08)',
+              'gold-glow': '0 0 35px rgba(209, 162, 42, 0.45)',
+            }
+          }
+        }
+      }
+    </script>
+
+      /* Font Face Declarations for Local Galano & Gelano Grotesque & Bahnschrift */
+      @font-face {
+        font-family: 'Gelano Grotesque Regular';
+        src: local('Gelano Grotesque Regular'), local('Gelano Grotesque-Regular'), local('Galano Grotesque Regular'), local('Galano Grotesque-Regular'), local('Gelano Grotesque'), local('Galano Grotesque');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Galano Grotesque';
+        src: local('Gelano Grotesque Regular'), local('Galano Grotesque Regular'), local('Gelano Grotesque-Regular'), local('Galano Grotesque-Regular'), local('Gelano Grotesque'), local('Galano Grotesque'), local('GalanoGrotesque-Regular'), local('GalanoGrotesque');
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Galano Grotesque';
+        src: local('Gelano Grotesque Bold'), local('Galano Grotesque Bold'), local('Gelano Grotesque-Bold'), local('Galano Grotesque-Bold'), local('GalanoGrotesque-Bold');
+        font-weight: 600 800;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Gelano Grotesque Alt Light';
+        src: local('Gelano Grotesque Alt Light'), local('Gelano Grotesque Alt-Light'), local('Gelano Grotesque AltLight'), local('GelanoGrotesqueAlt-Light'), local('Galano Grotesque Alt Light'), local('Galano Grotesque Alt-Light'), local('Galano Grotesque AltLight'), local('GalanoGrotesqueAlt-Light'), local('Gelano Grotesque Alt'), local('Galano Grotesque Alt'), local('Gelano Grotesque Light'), local('Galano Grotesque Light');
+        font-weight: 200 300;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Galano Grotesque Alt Light';
+        src: local('Gelano Grotesque Alt Light'), local('Galano Grotesque Alt Light'), local('Gelano Grotesque Alt-Light'), local('Galano Grotesque Alt-Light'), local('GelanoGrotesqueAlt-Light'), local('GalanoGrotesqueAlt-Light'), local('Gelano Grotesque Alt'), local('Galano Grotesque Alt'), local('Galano Grotesque Light'), local('Gelano Grotesque Light');
+        font-weight: 200 300;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Galano Grotesque Light';
+        src: local('Gelano Grotesque Light'), local('Galano Grotesque Light'), local('Gelano Grotesque-Light'), local('Galano Grotesque-Light'), local('GalanoGrotesque-Light');
+        font-weight: 200 300;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Bahnschrift';
+        src: local('Bahnschrift'), local('Bahnschrift Regular'), local('Bahnschrift-Regular');
+        font-display: swap;
+      }
+
+      .brand-name-regular {
+        font-family: 'Gelano Grotesque Regular', 'Galano Grotesque', 'Gelano Grotesque', 'Outfit', 'Barlow', -apple-system, sans-serif;
+        font-weight: 400 !important;
+        letter-spacing: -0.015em;
+      }
+      .brand-name-alt-light {
+        font-family: 'Gelano Grotesque Alt Light', 'Galano Grotesque Alt Light', 'Galano Grotesque Alt', 'Gelano Grotesque Alt', 'Galano Grotesque Light', 'Outfit', -apple-system, sans-serif;
+        font-weight: 300 !important;
+        letter-spacing: -0.015em;
+      }
+
+      /* Sharp Squares Brand Constitution: Zero border-radius across all components */
+      *, *::before, *::after {
+        border-radius: 0px !important;
+      }
+
+      /* Logo Circle Exception: Explicitly preserve circular brand logos without borders or rings */
+      .brand-logo-circle,
+      .brand-logo-circle *,
+      .brand-circle-logo {
+        border-radius: 9999px !important;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+      }
+
+      /* Brand Identity Board Warm Organic Gradient (Alabaster, Sand, Ochre Gold) */
+      .hero-brand-gradient {
+        background: 
+          radial-gradient(ellipse at 88% 20%, rgba(209, 162, 42, 0.25) 0%, transparent 55%),
+          radial-gradient(ellipse at 12% 80%, rgba(190, 179, 160, 0.35) 0%, transparent 60%),
+          linear-gradient(135deg, #F4F1EA 0%, #EFE8DB 32%, #E5DAC3 62%, #DEC797 86%, #D1A22A 100%);
+      }
+
+      /* Custom Minimal Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F4F1EA;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #BEB3A0;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #D1A22A;
+      }
+    </style>
+  </head>
+  <body class="bg-[#F4F1EA] text-[#2D322F] selection:bg-[#D1A22A]/30 selection:text-[#2D322F] font-sans min-h-screen flex flex-col antialiased">
+
+    <!-- Top Golden Ochre Accent Band -->
+    <div class="h-1 bg-[#D1A22A] w-full shrink-0"></div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-[#F4F1EA] border-b border-[#BEB3A0]">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 sm:gap-6">
+        
+        <!-- Brand Wordmark & Logo -->
+        <div class="flex items-center gap-2 sm:gap-3.5 min-w-0">
+          <div class="brand-logo-circle w-11 h-11 sm:w-16 sm:h-16 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+            <img 
+              src="images/logo.svg" 
+              alt="NECTAR AND HIVE" 
+              class="brand-logo-circle w-full h-full object-cover rounded-full" 
+              referrerpolicy="no-referrer"
+              onerror="this.onerror=null; this.src='images/Untitled-3.png';"
+            />
+          </div>
+          <div class="flex flex-col min-w-0">
+            <span class="text-base sm:text-2xl tracking-tight text-[#2D322F] whitespace-nowrap">
+              <span class="brand-name-regular">NECTAR AND</span> <span class="brand-name-alt-light">HIVE</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- WhatsApp Concierge Action -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <a 
+            href="https://wa.me/27827736543?text=Hello%20NECTAR%20AND%20HIVE%2C%20I%20would%20like%20to%20order%20raw%20honey%20or%20tea" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="px-3 py-2 sm:px-5 sm:py-2.5 bg-[#2D322F] hover:bg-[#D1A22A] text-[#F4F1EA] hover:text-[#2D322F] text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 sm:gap-2 font-bahnschrift shadow-sm whitespace-nowrap">
+            <i class="ph ph-whatsapp-logo text-base"></i>
+            <span class="hidden sm:inline">WhatsApp Order (+27 82 773 6543)</span>
+            <span class="sm:hidden">WhatsApp Order</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Maintenance Hero -->
+    <main class="flex-grow flex items-center justify-center py-16 sm:py-24 relative hero-brand-gradient">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        
+        <!-- Center Notice Panel -->
+        <div class="bg-[#F4F1EA]/90 backdrop-blur-md border border-[#BEB3A0] p-8 sm:p-12 shadow-luxury text-center flex flex-col items-center">
+          
+          <!-- Editorial Kicker (Unboxed Text with Separators) -->
+          <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#505649] font-bahnschrift mb-5">
+            <span>Sherwood, Durban</span>
+            <span aria-hidden="true">·</span>
+            <span>Seasonal Harvest Refresh</span>
+            <span aria-hidden="true">·</span>
+            <span class="text-[#D1A22A]">Catalog Updating</span>
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-bold text-[#2D322F] tracking-tight leading-[1.12] mb-5 text-balance">
+            Currently in Maintenance.<br />
+            <span class="text-[#877C6B] font-light">Perfecting Our Next Harvest.</span>
+          </h1>
+
+          <!-- Prose Narrative -->
+          <p class="text-base sm:text-lg text-[#2D322F]/80 max-w-2xl mx-auto leading-relaxed mb-8 font-bahnschrift">
+            We are briefly updating our online boutique and preparing fresh batches of 100% raw, cold-extracted South African honey and highland tea in Sherwood, Durban. We will reopen for online orders shortly.
+          </p>
+
+          <!-- Status Hairline Banner -->
+          <div class="w-full max-w-xl mb-10 p-4 border border-[#BEB3A0] bg-[#FAF8F5] text-left flex items-start gap-4">
+            <div class="w-8 h-8 bg-[#2D322F] text-[#D1A22A] flex items-center justify-center shrink-0 mt-0.5">
+              <i class="ph ph-clock-countdown text-lg"></i>
+            </div>
+            <div>
+              <div class="font-bold text-[#2D322F] uppercase tracking-wider text-xs font-bahnschrift">System Status: Scheduled Maintenance</div>
+              <p class="text-xs text-[#2D322F]/70 mt-0.5 leading-relaxed font-bahnschrift">
+                Online checkout is momentarily paused while new seasonal inventory is added. All local collections in Sherwood and courier dispatches continue as normal.
+              </p>
+            </div>
+          </div>
+
+          <!-- Direct WhatsApp Concierge Card -->
+          <div class="w-full max-w-xl border-2 border-[#2D322F] bg-white p-6 sm:p-8 mb-10 text-left shadow-luxury">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#BEB3A0] pb-4 mb-4">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-[#D1A22A] font-bahnschrift block">Direct Cell &amp; WhatsApp Concierge</span>
+                <h2 class="text-xl font-bold text-[#2D322F] font-display mt-0.5">Need Honey or Tea Today?</h2>
+              </div>
+              <span class="text-xs text-[#505649] font-bahnschrift self-start sm:self-auto">Same-Day Durban Pickup</span>
+            </div>
+            
+            <p class="text-sm text-[#2D322F]/75 leading-relaxed font-bahnschrift mb-6">
+              Our bees never stop working! You can place direct orders, arrange free local collection in Sherwood, or book nationwide courier delivery right now via WhatsApp or phone.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <a 
+                href="https://wa.me/27827736543?text=Hello%20NECTAR%20AND%20HIVE%2C%20I%20noticed%20the%20website%20is%20in%20maintenance.%20I%20would%20like%20to%20order%20raw%20honey%20or%20tea" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="py-3 px-5 bg-[#2D322F] hover:bg-[#D1A22A] text-[#F4F1EA] hover:text-[#2D322F] font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 text-center font-bahnschrift shadow-sm">
+                <i class="ph ph-whatsapp-logo text-base"></i>
+                <span>Order on WhatsApp</span>
+              </a>
+              <a 
+                href="tel:+27827736543" 
+                class="py-3 px-5 bg-transparent hover:bg-[#F4F1EA] text-[#2D322F] font-bold text-xs uppercase tracking-wider border border-[#BEB3A0] transition-colors flex items-center justify-center gap-2 text-center font-bahnschrift">
+                <i class="ph ph-phone text-base text-[#D1A22A]"></i>
+                <span>Call +27 82 773 6543</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Harvest Preview Strip -->
+          <div class="w-full max-w-xl text-left border-t border-[#BEB3A0] pt-8 mb-8">
+            <h3 class="text-xs font-bold uppercase tracking-widest text-[#505649] font-bahnschrift mb-4 text-center">
+              Reopening With Fresh Batches Of:
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
+              <div class="p-3 bg-white border border-[#BEB3A0]">
+                <div class="text-xs font-bold text-[#2D322F] font-display">Raw Liquid Honey</div>
+                <div class="text-[11px] text-[#877C6B] font-bahnschrift mt-1">Single-origin, 500g &amp; 1kg</div>
+              </div>
+              <div class="p-3 bg-white border border-[#BEB3A0]">
+                <div class="text-xs font-bold text-[#2D322F] font-display">Artisanal Creamed</div>
+                <div class="text-[11px] text-[#877C6B] font-bahnschrift mt-1">Velvety spreadable texture</div>
+              </div>
+              <div class="p-3 bg-white border border-[#BEB3A0]">
+                <div class="text-xs font-bold text-[#2D322F] font-display">KETEPA Tea</div>
+                <div class="text-[11px] text-[#877C6B] font-bahnschrift mt-1">Kenyan highland estate</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reopen Notification Form -->
+          <div class="w-full max-w-md">
+            <h4 class="text-xs font-bold uppercase tracking-widest text-[#2D322F] font-bahnschrift mb-3 text-center">
+              Get Notified The Moment We Go Live
+            </h4>
+            <form onsubmit="handleNotifySubmit(event)" class="flex flex-col sm:flex-row items-stretch gap-2">
+              <div class="relative flex-grow">
+                <i class="ph ph-envelope-simple absolute left-3.5 top-1/2 -translate-y-1/2 text-[#877C6B] text-sm"></i>
+                <input 
+                  type="email" 
+                  id="notify-email" 
+                  required 
+                  placeholder="Enter your email address" 
+                  class="w-full pl-10 pr-4 py-3 bg-white border border-[#BEB3A0] text-[#2D322F] placeholder-[#877C6B] text-xs focus:outline-none focus:border-[#D1A22A] transition-colors font-bahnschrift" />
+              </div>
+              <button 
+                type="submit" 
+                class="px-6 py-3 bg-[#D1A22A] hover:bg-[#E0B548] text-[#2D322F] font-bold text-xs uppercase tracking-wider transition-all shrink-0 font-bahnschrift shadow-sm">
+                Notify Me
+              </button>
+            </form>
+            <p id="notify-feedback" class="text-xs text-[#505649] mt-3 hidden font-bahnschrift font-semibold">
+              <i class="ph ph-check-circle text-[#D1A22A]"></i> Thank you! We will email you the moment our online store reopens.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#2D322F] text-[#F4F1EA] py-12 text-xs font-bahnschrift">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center border-b border-[#F4F1EA]/15 pb-8 mb-6">
+          
+          <!-- Column 1: Brand Wordmark & Location -->
+          <div class="md:col-span-6 flex items-center gap-3.5">
+            <div class="brand-logo-circle w-12 h-12 rounded-full overflow-hidden flex items-center justify-center shrink-0">
+              <img 
+                src="images/logo.svg" 
+                alt="NECTAR AND HIVE Logo" 
+                class="brand-logo-circle w-full h-full object-cover rounded-full" 
+                referrerpolicy="no-referrer"
+                onerror="this.onerror=null; this.src='images/Untitled-3.png';"
+              />
+            </div>
+            <div>
+              <div class="text-xl tracking-tight text-[#F4F1EA] whitespace-nowrap">
+                <span class="brand-name-regular">NECTAR AND</span> <span class="brand-name-alt-light text-[#F4F1EA]/90">HIVE</span>
+              </div>
+              <div class="text-[#D1A22A] text-xs flex items-center gap-1.5 mt-0.5">
+                <i class="ph ph-map-pin"></i>
+                <span>Sherwood, Durban, KwaZulu-Natal, South Africa</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Direct Contact Details -->
+          <div class="md:col-span-6 flex flex-wrap items-center justify-start md:justify-end gap-6 text-sm text-[#D1A22A]">
+            <a href="https://wa.me/27827736543" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5" title="WhatsApp (+27 82 773 6543)">
+              <i class="ph ph-whatsapp-logo text-base"></i>
+              <span class="text-xs text-[#F4F1EA]/80">+27 82 773 6543</span>
+            </a>
+            <a href="mailto:nectarnhive@gmail.com" class="hover:text-white transition-colors flex items-center gap-1.5" title="Email: nectarnhive@gmail.com">
+              <i class="ph ph-envelope text-base"></i>
+              <span class="text-xs text-[#F4F1EA]/80">nectarnhive@gmail.com</span>
+            </a>
+            <a href="https://www.instagram.com/nectar_n_hive" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5" title="Instagram (@nectar_n_hive)">
+              <i class="ph ph-instagram-logo text-base"></i>
+              <span class="text-xs text-[#F4F1EA]/80">@nectar_n_hive</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[#F4F1EA]/60 text-xs">
+          <p>© 2026 NECTAR AND HIVE. All rights reserved. 100% Raw South African Honey &amp; Kenyan Highland Tea.</p>
+          <p>Harvested &amp; bottled in Sherwood, Durban.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Client Script for Notification Subscriptions -->
+    <script>
+      function handleNotifySubmit(e) {
+        e.preventDefault();
+        const input = document.getElementById('notify-email');
+        const feedback = document.getElementById('notify-feedback');
+        const email = input.value.trim();
+        if (email) {
+          try {
+            const list = JSON.parse(localStorage.getItem('nectar_maintenance_subscribers') || '[]');
+            if (!list.includes(email)) list.push(email);
+            localStorage.setItem('nectar_maintenance_subscribers', JSON.stringify(list));
+          } catch (err) {}
+          input.value = '';
+          feedback.classList.remove('hidden');
+        }
+      }
+    </script>
+  </body>
+</html>
